@@ -1,24 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import Footer from 'components/Footer';
+import Navigation from 'components/Navigation';
+import { Route, Switch } from 'react-router-dom';
+import Main from 'views/Main';
+
+import PrivacyPolicy from 'views/privacyPolicy/PrivacyPolicy';
+import Rider from 'views/rider/Rider';
+import TermsAndConditions from 'views/termsAndConditions/TermsAndConditions';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Navigation />
+      <Switch>
+        <Route exact path="/">
+          <Main />
+        </Route>
+        <Route exact path="/rider" render={() => <Rider />} />
+        <Route exact path="/privacy-policy" render={() => <PrivacyPolicy />} />
+        <Route
+          exact
+          path="/terms-and-conditions"
+          render={() => <TermsAndConditions />}
+        />
+        <Route component={() => <div>Not Found</div>} />
+      </Switch>
+      <Footer />
+    </>
   );
 }
 
