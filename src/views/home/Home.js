@@ -61,7 +61,7 @@ function Home() {
                   {/* Gusto mo bang maging LODI sa negosyo?
               <br /> Be a LODI partner! */}
                 </Text>
-                <GetNotified />
+                <GetNotified index_key="0" />
               </Stack>
             </Stack>
             <Stack

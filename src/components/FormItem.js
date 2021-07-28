@@ -18,7 +18,7 @@ const FormItem = ({ name, label, ...rest }) => {
       >
         {label}
       </FormLabel>
-      <Input outline="none" bg="gray.100" borderColor="gray.100" {...field} />
+      <Input outline="none" bg="gray.100" borderColor="gray.100" {...field} {...rest} />
       {meta.touched && meta.error && (
         <FormErrorMessage mt="1" fontSize="xs" {...{ type: 'error' }}>
           {meta.error}
