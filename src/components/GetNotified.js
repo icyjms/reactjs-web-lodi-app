@@ -45,8 +45,8 @@ const GetNotified = ({index_key}) => {
     if (submit) {
       setState({ loading: false, iframe_loaded: true });
       toast({
-        title: "Notified",
-        description: "We will notified you",
+        title: "Thank you.",
+        description: "We'll send you an update, soon!",
         status: "success",
         duration: 4000,
         isClosable: true,

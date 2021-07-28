@@ -1,38 +1,39 @@
 import {
   Box,
   Flex,
-  // HStack,
-  // Link,
+  HStack,
+  Link,
   IconButton,
   useDisclosure,
-  // useColorModeValue,
-  // Stack,
+  useColorModeValue,
+  Stack,
   Container,
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
-// import { sections } from 'utils/config';
+import { sections } from 'utils/config';
 
 import { ReactComponent as Logo } from 'assets/img/logo.svg';
-import { Link } from 'react-router-dom';
+import {Link as RouterLink} from 'react-router-dom'
 
-// const NavLink = ({ link, children }) => (
-//   <Link
-//     px={2}
-//     py={1}
-//     rounded={'md'}
-//     _active={{
-//       color: 'brand.500',
-//     }}
-//     _hover={{
-//       textDecoration: 'none',
-//       color: useColorModeValue('dark.100'),
-//     }}
-//     color="brand.100"
-//     href={link}
-//   >
-//     {children}
-//   </Link>
-// );
+const NavLink = ({ link, children }) => (
+  <Link
+    as={RouterLink}
+    px={2}
+    py={1}
+    rounded={'md'}
+    _active={{
+      color: 'brand.500',
+    }}
+    _hover={{
+      textDecoration: 'none',
+      color: useColorModeValue('dark.100'),
+    }}
+    color="brand.100"
+    to={link}
+  >
+    {children}
+  </Link>
+);
 
 function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -52,16 +53,16 @@ function Navigation() {
             onClick={isOpen ? onClose : onOpen}
           />
           {/* nav items */}
-          {/* <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
+          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
             {sections.map((item) => (
               <NavLink link={item.link} key={item.name}>
                 {item.name}
               </NavLink>
             ))}
-          </HStack> */}
+          </HStack>
         </Flex>
 
-        {/* {isOpen ? (
+        {isOpen ? (
           <Box pb={4} display={{ md: 'none' }}>
             <Stack as="nav" spacing={4}>
               {sections.map((item) => (
@@ -71,7 +72,7 @@ function Navigation() {
               ))}
             </Stack>
           </Box>
-        ) : null} */}
+        ) : null}
       </Box>
     </Container>
   );

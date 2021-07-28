@@ -6,11 +6,13 @@ import Main from 'views/Main';
 import PrivacyPolicy from 'views/privacyPolicy/PrivacyPolicy';
 import Rider from 'views/rider/Rider';
 import TermsAndConditions from 'views/termsAndConditions/TermsAndConditions';
+import ScrollToTop from  'components/ScrollToTop';
 
 function App() {
   return (
     <>
       <Navigation />
+      <ScrollToTop />
       <Switch>
         <Route exact path="/">
           <Main />
