@@ -11,7 +11,7 @@ const initValues = {
   vehicle_year_model: '',
   license_restriction_code: '',
   privacy_policy_agreement: false,
-  for_marketing_use: false,
+  for_marketing_use: false
 
 };
 const riderValidationSchema = object({
