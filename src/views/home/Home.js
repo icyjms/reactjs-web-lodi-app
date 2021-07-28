@@ -18,6 +18,7 @@ function Home() {
   const subtext = 'Get notified when we launch';
 
   const goTo = (path) => {
+    // window.history.pushState({}, document.title, path);
     window.location.href = path;
   };
 

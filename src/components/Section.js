@@ -8,11 +8,14 @@ const Section = ({ id, children }) => {
   const ref = useRef(null);
   const entry = useIntersectionObserver(ref, { threshold });
   const isVisible = !!entry?.isIntersecting;
+
   useEffect(() => {
     if (entry && isVisible) {
       let hashId = `#${entry.target.id}`;
-      if (window.location.hash !== hashId && entry.target.id) {
-        window.history.pushState({}, document.title, hashId);
+      if (entry.target.id) {
+        if (window.location.hash !== hashId) {
+          window.history.pushState({}, document.title, hashId);
+        }
       } else {
         window.history.pushState({}, document.title, window.location.pathname);
       }
