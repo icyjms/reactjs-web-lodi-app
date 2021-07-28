@@ -10,9 +10,9 @@ import {
 
 import { ReactComponent as DeviceImg } from 'assets/img/pre-launch-device.svg';
 import GetNotified from 'components/GetNotified';
-import LodiText from 'components/LodiText';
 import Section from 'components/Section';
 import { Link } from 'react-router-dom';
+import { ReactComponent as Logo } from 'assets/img/logo.svg';
 
 function Home() {
   const subtext = 'Get notified when we launch';
@@ -48,9 +48,13 @@ function Home() {
                   color="dark.100"
                   style={{ textTransform: 'uppercase' }}
                 >
-                  Parating na ang bagong
-                  <LodiText />
+                  Parating na ang bagong &nbsp;
+                  <Box width={{base: '55px', sm: "49px", lg: '120px'}} display="inline-block">
+                    <Logo width="100%" height="100%" />
+                  </Box>
+                  &nbsp;
                   ng delivery!
+                  
                 </Text>
               </Heading>
               <Stack>
