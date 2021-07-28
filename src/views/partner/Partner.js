@@ -62,7 +62,7 @@ function Partner() {
                 </HStack>
               ))}
             </SimpleGrid>
-            <GetNotified />
+            <GetNotified index_key="1" />
           </Flex>
           <Box>
             <PartnerImg />

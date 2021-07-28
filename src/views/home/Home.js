@@ -18,6 +18,7 @@ function Home() {
   const subtext = 'Get notified when we launch';
 
   const goTo = (path) => {
+    // window.history.pushState({}, document.title, path);
     window.location.href = path;
   };
 
@@ -61,7 +62,7 @@ function Home() {
                   {/* Gusto mo bang maging LODI sa negosyo?
               <br /> Be a LODI partner! */}
                 </Text>
-                <GetNotified />
+                <GetNotified index_key="0" />
               </Stack>
             </Stack>
             <Stack

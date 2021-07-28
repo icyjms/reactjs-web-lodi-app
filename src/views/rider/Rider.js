@@ -1,3 +1,4 @@
+import {Fragment, useEffect, useReducer, useState} from "react";
 import {
   Stack,
   Flex,
@@ -6,21 +7,74 @@ import {
   Text,
   Button,
   Container,
-  Input,
-  Checkbox,
+  InputLeftAddon,
+  useToast
 } from '@chakra-ui/react';
 import FormItem from 'components/FormItem';
 import FormSelect from 'components/FormSelect';
+import FormCheckbox from 'components/FormCheckbox';
 
 import LodiText from 'components/LodiText';
 import Section from 'components/Section';
 import { Form, Formik } from 'formik';
-import { initValues, riderValidationSchema } from './rider-config';
+import { initValues, riderValidationSchema, how_did_you_hear_options } from './rider-config';
+import {createRiderApplication, getVehicleTypes} from './rider-api';
+
+const init_state = {
+  vehicle_types_options: []
+};
 
 function Rider() {
+  const toast = useToast()
   const subtext = 'Be one of our delivery idols! Register now.';
 
-  const initState = {};
+
+  const dispatch = (state, new_state) => ({
+    ...state,
+    ...new_state,
+  });
+  const [state, setState] = useReducer(dispatch, init_state);
+  const [loading, setLoading] = useState(false);
+
+  const {vehicle_types_options=[]} =state;
+
+
+  function onSubmitToAdmin(values, formBags) {
+    setLoading(true);
+    createRiderApplication(values)
+      .then((response) => {
+        const {message =''} = response;
+        toast({
+          title: "Rider Application",
+          description: message,
+          status: "success",
+          position: "top-right",
+        })
+      })
+      .catch(err => {
+        return err;
+      }).finally(()=>{
+        setLoading(false);
+        formBags.resetForm();
+      });
+
+    return values;
+  }
+
+  useEffect(()=>{
+    const params= {
+      page: 1,
+      limit: 9999999
+    }
+    getVehicleTypes(params)
+      .then(response => {
+        const {data=[]} = response;
+        setState({
+          vehicle_types_options: data
+        })
+        console.log('response', response)
+      });
+  }, [])
 
   return (
     <Section>
@@ -67,7 +121,7 @@ function Rider() {
           >
             <Formik
               initialValues={initValues}
-              onSubmit={() => {}}
+              onSubmit={onSubmitToAdmin}
               validateOnBlur
               validationSchema={riderValidationSchema}
             >
@@ -78,18 +132,35 @@ function Rider() {
                     <FormItem name="last_name" label="Last Name" />
                   </Stack>
                   <Stack direction={{ base: 'column', md: 'row' }}>
-                    <FormItem name="contact_no" label="Contact No." />
+                    <FormItem name="contact_no" label="Contact No." leftAddon={<InputLeftAddon children="+63" />}/>
                     <FormItem name="email" type="email" label="Email" />
                   </Stack>
                   <FormItem name="address" label="Address" />
                   <Stack direction={{ base: 'column', md: 'row' }}>
-                    <FormSelect name="vehicle_type" label="Vehicle Type" />
+                    <FormSelect name="vehicle_type_id" label="Vehicle Type">
+                    <option value=""> -- Select --</option>
+                    {vehicle_types_options.map((item, x) => {
+                      return (
+                        <Fragment key={x}>
+                          <option key={item.id} value={item.id}>{item.name}</option>
+                        </Fragment>
+                      );
+                    })}
+                    </FormSelect>
                   </Stack>
                   <Stack direction={{ base: 'column', md: 'row' }}>
                     <FormSelect
                       name="vehicle_year_model"
                       label="Vehicle’s Year Model"
-                    />
+                    >
+                      <option value=""> -- Select --</option>
+                      {[...Array(100)].map((a,b)=>{
+                        const year = new Date().getFullYear() - b;
+                        return (
+                          <option key={b} value={year}>{year}</option>
+                        )
+                      })}
+                    </FormSelect>
                     <FormItem
                       name="license_restriction_code"
                       label="Driver’s License Restriction Code"
@@ -98,19 +169,28 @@ function Rider() {
                   <FormSelect
                     name="lodi_source"
                     label="Where did you hear about LODI?"
-                  />
+                  >
+                    <option value=""> -- Select --</option>
+                    {how_did_you_hear_options.map((item, x) => {
+                      return (
+                        <Fragment key={x}>
+                          <option key={item}>{item}</option>
+                        </Fragment>
+                      );
+                    })}
+                  </FormSelect>
                   <Box py={[1, 2, 4]}>
-                    <Checkbox size="lg">
+                    <FormCheckbox name="privacy_policy_agreement" size="lg">
                       <Text fontSize="small" color="gray.600">
                         By providing LODI with my personal data, I agree that
                         LODI may collect, use and disclose my personal data for
                         purposes in accordance with its Privacy Policy and the
                         Personal Data Protection Act 2012.
                       </Text>
-                    </Checkbox>
+                    </FormCheckbox>
                   </Box>
                   <Box py={[1, 2, 4]}>
-                    <Checkbox size="lg">
+                    <FormCheckbox name="for_marketing_use" size="lg">
                       <Text fontSize="small" color="gray.600">
                         I understand that my personal data may be used for
                         marketing purposes by LODI or its partners; and I hereby
@@ -118,12 +198,12 @@ function Rider() {
                         by telephone, SMS or e-mail and through other channels
                         as determined by LODI.
                       </Text>
-                    </Checkbox>
+                    </FormCheckbox>
                   </Box>
                   <Button
                     mt="8"
                     type="submit"
-                    isLoading={isSubmitting}
+                    isLoading={isSubmitting || loading}
                     loadingText="Submitting"
                     bg="cyan"
                     isFullWidth
