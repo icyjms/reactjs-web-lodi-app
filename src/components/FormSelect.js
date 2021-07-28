@@ -19,7 +19,9 @@ const FormSelect = ({ name, children, label, required, ...rest }) => {
       >
         {label}
       </FormLabel>
-      <Select bg="gray.100" borderColor="gray.100" {...field} />
+      <Select bg="gray.100" borderColor="gray.100" {...field}>
+        {children}
+      </Select>
       {meta.touched && meta.error && (
         <FormErrorMessage mt="1" fontSize="xs" {...{ type: 'error' }}>
           {meta.error}
