@@ -76,13 +76,13 @@ function Home() {
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
                 <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                  BE A LODI PARTNER
+                  MAGING LODI PARTNER
                 </Button>
               </Stack>
               <Stack direction="column">
-                <Text color="gray.500">Ikaw ba ay Rider?</Text>
-                <Button as={Link} to="/rider">
-                  BE A LODI RIDER
+                <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
+                <Button as={Link} to="/rider" backgroundColor="cyan">
+                  MAGING LODI RIDER
                 </Button>
               </Stack>
             </Stack>
