@@ -6,7 +6,7 @@ function TermsAndConditions() {
   return (
     <Section>
       <Container maxW="12xl" px={[4, 8, 16]}>
-        <Box>
+        <Box textAlign="justify">
           <Heading
             my={[2, 4, 16]}
             lineHeight={1.1}
@@ -23,6 +23,7 @@ function TermsAndConditions() {
           </Heading>
 
           <p>Last updated:&nbsp;2021-08-01</p>
+          <p>&nbsp;</p>
           <p>
             1.&nbsp;<strong>Introduction</strong>
           </p>
@@ -55,6 +56,7 @@ function TermsAndConditions() {
             a solution. These Terms apply to all visitors, users and others who
             wish to access or use Service.
           </p>
+          <p>&nbsp;</p>
           <p>
             2.&nbsp;<strong>Communications</strong>
           </p>
@@ -65,6 +67,7 @@ function TermsAndConditions() {
             communications from us by following the unsubscribe link or by
             emailing at&nbsp;support@lodi.ph.
           </p>
+          <p>&nbsp;</p>
           <p>
             3.&nbsp;<strong>Purchases</strong>
           </p>
@@ -97,6 +100,7 @@ function TermsAndConditions() {
             We reserve the right to refuse or cancel your order if fraud or an
             unauthorized or illegal transaction is suspected.
           </p>
+          <p>&nbsp;</p>
           <p>
             4.&nbsp;<strong>Contests, Sweepstakes and Promotions</strong>
           </p>
@@ -108,6 +112,7 @@ function TermsAndConditions() {
             rules as well as our Privacy Policy. If the rules for a Promotion
             conflict with these Terms of Service, Promotion rules will apply.
           </p>
+          <p>&nbsp;</p>
           <p>
             5.&nbsp;<strong>Refunds</strong>
           </p>
@@ -116,6 +121,7 @@ function TermsAndConditions() {
             <strong>7&nbsp;days</strong>&nbsp;of the original purchase of the
             Contract.
           </p>
+          <p>&nbsp;</p>
           <p>
             6.&nbsp;<strong>Content</strong>
           </p>
@@ -127,6 +133,7 @@ function TermsAndConditions() {
             part, for commercial purposes or for personal gain, without express
             advance written permission from us.
           </p>
+          <p>&nbsp;</p>
           <p>
             7.&nbsp;<strong>Prohibited Uses</strong>
           </p>
@@ -204,6 +211,7 @@ function TermsAndConditions() {
             0.9. Otherwise attempt to interfere with the proper working of
             Service.
           </p>
+          <p>&nbsp;</p>
           <p>
             8.&nbsp;<strong>Analytics</strong>
           </p>
@@ -211,6 +219,7 @@ function TermsAndConditions() {
             We may use third-party Service Providers to monitor and analyze the
             use of our Service.
           </p>
+          <p>&nbsp;</p>
           <p>
             9.&nbsp;<strong>No Use By Minors</strong>
           </p>
@@ -223,6 +232,7 @@ function TermsAndConditions() {
             you are not at least eighteen (18) years old, you are prohibited
             from both the access and usage of Service.
           </p>
+          <p>&nbsp;</p>
           <p>
             10.&nbsp;<strong>Accounts</strong>
           </p>
@@ -254,6 +264,7 @@ function TermsAndConditions() {
             We reserve the right to refuse service, terminate accounts, remove
             or edit content, or cancel orders in our sole discretion.
           </p>
+          <p>&nbsp;</p>
           <p>
             11.&nbsp;<strong>Intellectual Property</strong>
           </p>
@@ -266,6 +277,7 @@ function TermsAndConditions() {
             in connection with any product or service without the prior written
             consent of&nbsp;Logistikus Express, Incorporated.
           </p>
+          <p>&nbsp;</p>
           <p>
             12.&nbsp;<strong>Copyright Policy</strong>
           </p>
@@ -291,6 +303,7 @@ function TermsAndConditions() {
             the infringement of any Content found on and/or through Service on
             your copyright.
           </p>
+          <p>&nbsp;</p>
           <p>
             13.&nbsp;
             <strong>
@@ -333,6 +346,7 @@ function TermsAndConditions() {
             You can contact our Copyright Agent via email
             at&nbsp;support@lodi.ph.
           </p>
+          <p>&nbsp;</p>
           <p>
             14.&nbsp;<strong>Error Reporting and Feedback</strong>
           </p>
@@ -356,6 +370,7 @@ function TermsAndConditions() {
             distribute and commercialize) Feedback in any manner and for any
             purpose.
           </p>
+          <p>&nbsp;</p>
           <p>
             15.&nbsp;<strong>Links To Other Web Sites</strong>
           </p>
@@ -419,6 +434,7 @@ function TermsAndConditions() {
             THE FOREGOING DOES NOT AFFECT ANY WARRANTIES WHICH CANNOT BE
             EXCLUDED OR LIMITED UNDER APPLICABLE LAW.
           </p>
+          <p>&nbsp;</p>
           <p>
             17.&nbsp;<strong>Limitation Of Liability</strong>
           </p>
@@ -443,6 +459,7 @@ function TermsAndConditions() {
             INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE PRIOR LIMITATION OR
             EXCLUSION MAY NOT APPLY TO YOU.
           </p>
+          <p>&nbsp;</p>
           <p>
             18.&nbsp;<strong>Termination</strong>
           </p>
@@ -462,6 +479,7 @@ function TermsAndConditions() {
             limitation, ownership provisions, warranty disclaimers, indemnity
             and limitations of liability.
           </p>
+          <p>&nbsp;</p>
           <p>
             19.&nbsp;<strong>Governing Law</strong>
           </p>
@@ -479,6 +497,7 @@ function TermsAndConditions() {
             Service and supersede and replace any prior agreements we might have
             had between us regarding Service.
           </p>
+          <p>&nbsp;</p>
           <p>
             20.&nbsp;<strong>Changes To Service</strong>
           </p>
@@ -490,6 +509,7 @@ function TermsAndConditions() {
             time to time, we may restrict access to some parts of Service, or
             the entire Service, to users, including registered users.
           </p>
+          <p>&nbsp;</p>
           <p>
             21.&nbsp;<strong>Amendments To Terms</strong>
           </p>
@@ -527,6 +547,7 @@ function TermsAndConditions() {
             minimum extent such that the remaining provisions of Terms will
             continue in full force and effect.
           </p>
+          <p>&nbsp;</p>
           <p>
             23.&nbsp;<strong>Acknowledgement</strong>
           </p>
@@ -535,6 +556,7 @@ function TermsAndConditions() {
             THAT YOU HAVE READ THESE TERMS OF SERVICE AND AGREE TO BE BOUND BY
             THEM.
           </p>
+          <p>&nbsp;</p>
           <p>
             24.&nbsp;<strong>Contact Us</strong>
           </p>
