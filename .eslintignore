@@ -1,0 +1,7 @@
+# NODE
+node_modules/
+
+# INTERNALS
+build
+public
+**/serviceWorker.js

@@ -1,4 +1,3 @@
-import { useField } from 'formik';
 import {
   FormControl,
   FormErrorMessage,
@@ -6,6 +5,7 @@ import {
   Input,
   InputGroup,
 } from '@chakra-ui/react';
+import { useField } from 'formik';
 
 const FormItem = ({ name, label, leftAddon, rightAddon, ...rest }) => {
   const [field, meta] = useField({ name, ...rest });

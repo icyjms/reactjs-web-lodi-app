@@ -1,11 +1,7 @@
+import { Checkbox, FormControl, FormErrorMessage } from '@chakra-ui/react';
 import { useField } from 'formik';
-import {
-  FormControl,
-  FormErrorMessage,
-  Checkbox,
-} from '@chakra-ui/react';
 
-const FormItem = ({ name, label, ...rest }) => {
+const FormItem = ({ name, ...rest }) => {
   const [field, meta] = useField({ name, ...rest });
   return (
     <FormControl pb={[2, 4, 6]} isInvalid={meta.touched && meta.error}>

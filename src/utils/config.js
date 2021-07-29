@@ -1,4 +1,5 @@
 import { Icon } from '@chakra-ui/icon';
+
 const sections = [
   {
     name: 'Home',
