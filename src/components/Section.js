@@ -24,7 +24,7 @@ const Section = ({ id, children, minHeight }) => {
   }, [isVisible, entry]);
 
   return (
-    <Box id={id} as="section" minHeight={minHeight || "100vh"} {...{ ref }}>
+    <Box id={id} as="section" minHeight={minHeight || '100vh'} {...{ ref }}>
       {children}
     </Box>
   );

@@ -1,14 +1,13 @@
-import { useReducer, useCallback, useRef } from 'react';
-import { Button, Stack, useToast, VisuallyHidden, Box } from '@chakra-ui/react';
-import { Form, Formik } from 'formik';
-import { string, object } from 'yup';
 import FormItem from 'components/FormItem';
+import { Box, Button, Stack, VisuallyHidden, useToast } from '@chakra-ui/react';
+import { Form, Formik } from 'formik';
+import { object, string } from 'yup';
+import { useCallback, useReducer, useRef } from 'react';
 
 const GOOGLE_FORM_ENTRIES = {
   email: 'entry.1240738178',
 };
 
-console.log(process.env);
 const GOOGLE_FORM_ACTION_URL =
   process.env.REACT_APP_CONTACTUS_GOOGLE_FORM_ACTION_URL;
 
@@ -96,7 +95,7 @@ const GetNotified = ({ index_key }) => {
     );
   }
 
-  const handleInputChange = useCallback(({ event, errors, touched }) => {
+  const handleInputChange = useCallback(({ event }) => {
     const { name, value } = event.target;
     setValues({
       [name]: value,
@@ -131,7 +130,7 @@ const GetNotified = ({ index_key }) => {
         validateOnBlur
         validationSchema={contactUsValidationSchema}
       >
-        {({ handleChange, errors, touched, isSubmitting, handleSubmit }) => (
+        {({ handleChange, errors, touched, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
             <Stack
               maxW="xl"
