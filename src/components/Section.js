@@ -3,7 +3,7 @@ import { useEffect, useRef } from 'react';
 
 import useIntersectionObserver from 'utils/useIntersectionObserver';
 
-const Section = ({ id, children }) => {
+const Section = ({ id, children, minHeight }) => {
   const threshold = 0.4;
   const ref = useRef(null);
   const entry = useIntersectionObserver(ref, { threshold });
@@ -24,7 +24,7 @@ const Section = ({ id, children }) => {
   }, [isVisible, entry]);
 
   return (
-    <Box id={id} as="section" minHeight="100vh" {...{ ref }}>
+    <Box id={id} as="section" minHeight={minHeight || "100vh"} {...{ ref }}>
       {children}
     </Box>
   );
