@@ -1,28 +1,28 @@
-import { Fragment, useEffect, useReducer, useState } from "react";
+import FormCheckbox from 'components/FormCheckbox';
+import FormItem from 'components/FormItem';
+import FormSelect from 'components/FormSelect';
 import {
-  Stack,
-  Flex,
   Box,
-  Heading,
-  Text,
   Button,
   Container,
+  Flex,
+  Heading,
   InputLeftAddon,
+  Stack,
+  Text,
   useToast,
-} from "@chakra-ui/react";
-import FormItem from "components/FormItem";
-import FormSelect from "components/FormSelect";
-import FormCheckbox from "components/FormCheckbox";
+} from '@chakra-ui/react';
+import { Fragment, useEffect, useReducer, useState } from 'react';
 
-import { ReactComponent as Logo } from "assets/img/logo.svg";
-import Section from "components/Section";
-import { Form, Formik } from "formik";
+import Section from 'components/Section';
+import { Form, Formik } from 'formik';
+import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import { createRiderApplication, getVehicleTypes } from './rider-api';
 import {
+  how_did_you_hear_options,
   initValues,
   riderValidationSchema,
-  how_did_you_hear_options,
-} from "./rider-config";
-import { createRiderApplication, getVehicleTypes } from "./rider-api";
+} from './rider-config';
 
 const init_state = {
   vehicle_types_options: [],
@@ -30,7 +30,7 @@ const init_state = {
 
 function Rider() {
   const toast = useToast();
-  const subtext = "Maging isa sa aming delivery idols! Magpalista na.";
+  const subtext = 'Maging isa sa aming delivery idols! Magpalista na.';
 
   const dispatch = (state, new_state) => ({
     ...state,
@@ -45,12 +45,12 @@ function Rider() {
     setLoading(true);
     createRiderApplication(values)
       .then((response) => {
-        const { message = "" } = response;
+        const { message = '' } = response;
         toast({
-          title: "Rider Application",
+          title: 'Rider Application',
           description: message,
-          status: "success",
-          position: "top-right",
+          status: 'success',
+          position: 'top-right',
         });
       })
       .catch((err) => {
@@ -74,7 +74,6 @@ function Rider() {
       setState({
         vehicle_types_options: data,
       });
-      console.log("response", response);
     });
   }, []);
 
@@ -85,23 +84,23 @@ function Rider() {
           justifyContent="space-between"
           spacing={{ base: 16, md: 10 }}
           py={{ base: 4, md: 16 }}
-          direction={{ base: "column", md: "row" }}
+          direction={{ base: 'column', md: 'row' }}
         >
           <Stack>
             <Stack height="100%" spacing={{ base: 8, md: 10 }}>
               <Heading
                 lineHeight={1.1}
                 fontWeight={700}
-                fontSize={{ base: "4xl", sm: "3xl", lg: "7xl" }}
+                fontSize={{ base: '4xl', sm: '3xl', lg: '7xl' }}
               >
                 <Text
                   as="span"
                   color="dark.100"
-                  style={{ textTransform: "uppercase" }}
+                  style={{ textTransform: 'uppercase' }}
                 >
                   MAGING &nbsp;
                   <Box
-                    width={{ base: "55px", sm: "49px", lg: "120px" }}
+                    width={{ base: '55px', sm: '49px', lg: '120px' }}
                     display="inline-block"
                   >
                     <Logo width="100%" height="100%" />
@@ -112,7 +111,7 @@ function Rider() {
               <Stack>
                 <Text
                   color="gray.500"
-                  fontSize={{ base: "1xl", sm: "2xl", lg: "3xl" }}
+                  fontSize={{ base: '1xl', sm: '2xl', lg: '3xl' }}
                 >
                   {subtext}
                 </Text>
@@ -134,11 +133,11 @@ function Rider() {
             >
               {({ isSubmitting, handleSubmit }) => (
                 <Form id="rider-application-form" onSubmit={handleSubmit}>
-                  <Stack direction={{ base: "column", md: "row" }}>
+                  <Stack direction={{ base: 'column', md: 'row' }}>
                     <FormItem name="first_name" label="First Name" />
                     <FormItem name="last_name" label="Last Name" />
                   </Stack>
-                  <Stack direction={{ base: "column", md: "row" }}>
+                  <Stack direction={{ base: 'column', md: 'row' }}>
                     <FormItem
                       name="contact_no"
                       label="Contact No."
@@ -147,7 +146,7 @@ function Rider() {
                     <FormItem name="email" type="email" label="Email" />
                   </Stack>
                   <FormItem name="address" label="Address" />
-                  <Stack direction={{ base: "column", md: "row" }}>
+                  <Stack direction={{ base: 'column', md: 'row' }}>
                     <FormSelect name="vehicle_type_id" label="Vehicle Type">
                       <option value=""> -- Select --</option>
                       {vehicle_types_options.map((item, x) => {
@@ -161,7 +160,7 @@ function Rider() {
                       })}
                     </FormSelect>
                   </Stack>
-                  <Stack direction={{ base: "column", md: "row" }}>
+                  <Stack direction={{ base: 'column', md: 'row' }}>
                     <FormSelect
                       name="vehicle_year_model"
                       label="Vehicle’s Year Model"
@@ -207,10 +206,10 @@ function Rider() {
                   <Box py={[1, 2, 4]}>
                     <FormCheckbox name="for_marketing_use" size="lg">
                       <Text fontSize="small" color="gray.600">
-                        Nauunawaan kong ang mga impormasyon na galing sa akin ay{" "}
-                        <strong>maaaring</strong> gamitin ng LODI para sa{" "}
+                        Nauunawaan kong ang mga impormasyon na galing sa akin ay{' '}
+                        <strong>maaaring</strong> gamitin ng LODI para sa{' '}
                         <strong>M</strong>arketing. At, pumapayag akong
-                        makatanggap ng mga impormasyong may kinalaman sa{" "}
+                        makatanggap ng mga impormasyong may kinalaman sa{' '}
                         <strong>P</strong>romotions sa pamamagitan ng email,
                         SMS, o sa paano mang paraan na piliin ng LODI.
                       </Text>

@@ -1,12 +1,12 @@
 import Footer from 'components/Footer';
+import Main from 'views/Main';
 import Navigation from 'components/Navigation';
 import { Route, Switch } from 'react-router-dom';
-import Main from 'views/Main';
 
 import PrivacyPolicy from 'views/privacyPolicy/PrivacyPolicy';
 import Rider from 'views/rider/Rider';
+import ScrollToTop from 'components/ScrollToTop';
 import TermsAndConditions from 'views/termsAndConditions/TermsAndConditions';
-import ScrollToTop from  'components/ScrollToTop';
 
 function App() {
   return (

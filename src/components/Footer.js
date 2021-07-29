@@ -1,10 +1,10 @@
 import {
   Box,
   Container,
-  Stack,
-  SimpleGrid,
-  Text,
   Link,
+  SimpleGrid,
+  Stack,
+  Text,
 } from '@chakra-ui/react';
 
 import { Link as RouterLink } from 'react-router-dom';

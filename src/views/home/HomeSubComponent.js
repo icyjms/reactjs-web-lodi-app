@@ -1,12 +1,12 @@
 import {
-  Stack,
-  Flex,
-  Box,
-  Heading,
-  Text,
-  Container,
-  SimpleGrid,
   Avatar,
+  Box,
+  Container,
+  Flex,
+  Heading,
+  SimpleGrid,
+  Stack,
+  Text,
 } from '@chakra-ui/react';
 
 import { features } from 'utils/config';
