@@ -30,6 +30,7 @@ const Section = ({ id, children }) => {
       as="section"
       minHeight={{ base: '70vh', lg: '100vh', '2xl': '90vh' }}
       {...{ ref }}
+      direction="column"
     >
       {children}
     </Flex>

@@ -1,3 +1,5 @@
+import { useEffect, useState } from 'react';
+
 import {
   Box,
   Container,
@@ -13,23 +15,30 @@ import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
 import { sections } from 'utils/config';
 
 import { ReactComponent as Logo } from 'assets/img/logo.svg';
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterLink, useLocation } from 'react-router-dom';
 
-const NavLink = ({ link, children }) => (
+const NavLink = ({ link, children, activeLink }) => (
   <Link
+    exact
     as={RouterLink}
     px={2}
     py={1}
-    rounded="md"
     _active={{
       color: 'brand.500',
+      outline: 'none',
+    }}
+    _focus={{
+      color: 'brand.500',
+      outline: 'none',
     }}
     _hover={{
       textDecoration: 'none',
+      outline: 'none',
       color: useColorModeValue('dark.100'),
     }}
     color="brand.100"
     to={link}
+    variant={activeLink === link ? 'active' : ''}
   >
     {children}
   </Link>
@@ -37,6 +46,13 @@ const NavLink = ({ link, children }) => (
 
 function Navigation() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+  const { pathname } = useLocation();
+  const [activeLink, setActiveLink] = useState('/');
+
+  useEffect(() => {
+    setActiveLink(pathname);
+    return () => {};
+  }, [pathname]);
 
   return (
     <Container maxW="12xl" px={[4, 8, 16]}>
@@ -55,7 +71,7 @@ function Navigation() {
           {/* nav items */}
           <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
             {sections.map((item) => (
-              <NavLink link={item.link} key={item.name}>
+              <NavLink activeLink={activeLink} link={item.link} key={item.name}>
                 {item.name}
               </NavLink>
             ))}
