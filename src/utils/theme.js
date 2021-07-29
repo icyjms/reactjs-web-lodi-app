@@ -1,7 +1,23 @@
 // 1. Import `extendTheme`
 import { extendTheme } from '@chakra-ui/react';
 
+const Link = {
+  baseStyle: {
+    borderRadius: 0,
+  },
+  variants: {
+    active: {
+      borderBottom: '2px solid',
+      borderColor: 'brand.100',
+      color: 'brand.100',
+    },
+  },
+};
+
 const theme = extendTheme({
+  components: {
+    Link,
+  },
   fonts: {
     heading: 'Poppins',
     body: 'Poppins',

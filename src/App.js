@@ -1,8 +1,10 @@
+import { Route, Switch } from 'react-router-dom';
+
 import Footer from 'components/Footer';
 import Main from 'views/Main';
 import Navigation from 'components/Navigation';
-import { Route, Switch } from 'react-router-dom';
 
+import About from 'views/about/About';
 import PrivacyPolicy from 'views/privacyPolicy/PrivacyPolicy';
 import Rider from 'views/rider/Rider';
 import ScrollToTop from 'components/ScrollToTop';
@@ -18,6 +20,7 @@ function App() {
           <Main />
         </Route>
         <Route exact path="/rider" render={() => <Rider />} />
+        <Route exact path="/about" render={() => <About />} />
         <Route exact path="/privacy-policy" render={() => <PrivacyPolicy />} />
         <Route
           exact

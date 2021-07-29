@@ -7,7 +7,7 @@ const sections = [
   },
   {
     name: 'About Us',
-    link: '/',
+    link: '/about',
   },
   // {
   //   name: 'How It Works',
@@ -180,4 +180,12 @@ const offers = [
   'Single booking, multiple deliveries',
 ];
 
-export { sections, features, offers };
+const contactNumbers = [
+  '8818 5893 (LODI)',
+  '0917 111 5893 (LODI)',
+  '0908 890 5893 (LODI)',
+  '0916 432 6265',
+  '0961 126 0133',
+];
+
+export { sections, features, offers, contactNumbers };

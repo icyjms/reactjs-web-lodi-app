@@ -38,13 +38,13 @@ function Home() {
   }
 
   return (
-    <Section minHeight="70vh">
+    <Section>
       <Container maxW="12xl" px={[4, 8, 16]}>
         <Stack
           justifyContent="space-between"
           spacing={{ base: 16, md: 10 }}
           py={{ base: 4, md: 16 }}
-          direction={{ base: 'column', md: 'row' }}
+          direction={{ base: 'column', lg: 'row' }}
         >
           <Stack>
             <Stack
@@ -56,7 +56,7 @@ function Home() {
               <Heading
                 lineHeight={1.1}
                 fontWeight={700}
-                fontSize={{ base: '4xl', sm: '3xl', lg: '7xl' }}
+                fontSize={{ base: '4xl', sm: '5xl', lg: '7xl', '2xl': '8xl' }}
               >
                 <Text
                   as="span"
@@ -65,7 +65,7 @@ function Home() {
                 >
                   Parating na ang bagong &nbsp;
                   <Box
-                    width={{ base: '55px', sm: '49px', lg: '120px' }}
+                    width={{ base: '55px', sm: '80px', lg: '120px' }}
                     display="inline-block"
                   >
                     <Logo width="100%" height="100%" />
@@ -86,7 +86,7 @@ function Home() {
               </Stack>
             </Stack>
             <Stack
-              direction={{ base: 'column', sm: 'row' }}
+              direction={{ base: 'column', xl: 'row' }}
               spacing={[4, 8, 12]}
             >
               <Stack direction="column">
@@ -104,7 +104,7 @@ function Home() {
             </Stack>
             <Stack>
               <Flex>
-                <Box maxW={'3xl'} py={10}>
+                <Box maxW="3xl" py={10}>
                   <Text color="gray.500">Coming Soon!</Text>
                   <Box onClick={addToast} as="button">
                     <AppStoreLogo />
