@@ -3,9 +3,8 @@ import ApiService from 'utils/ApiService';
 const { post, get } = ApiService();
 const url = {
   rider: '/rider-applications',
-  vehicle_types: '/rider-applications/vehicle-types'
+  vehicle_types: '/rider-applications/vehicle-types',
 };
-
 
 async function getVehicleTypes(params) {
   try {
@@ -15,7 +14,6 @@ async function getVehicleTypes(params) {
     throw err;
   }
 }
-
 
 async function createRiderApplication(body) {
   try {

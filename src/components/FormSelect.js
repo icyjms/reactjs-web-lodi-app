@@ -1,12 +1,12 @@
-import { useField } from 'formik';
 import {
   FormControl,
   FormErrorMessage,
   FormLabel,
   Select,
 } from '@chakra-ui/react';
+import { useField } from 'formik';
 
-const FormSelect = ({ name, children, label, required, ...rest }) => {
+const FormSelect = ({ name, children, label }) => {
   const [field, meta] = useField({ name });
 
   return (

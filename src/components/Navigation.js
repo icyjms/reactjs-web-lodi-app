@@ -1,32 +1,32 @@
 import {
   Box,
+  Container,
   Flex,
   HStack,
-  Link,
   IconButton,
-  useDisclosure,
-  useColorModeValue,
+  Link,
   Stack,
-  Container,
-} from "@chakra-ui/react";
-import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
-import { sections } from "utils/config";
+  useColorModeValue,
+  useDisclosure,
+} from '@chakra-ui/react';
+import { CloseIcon, HamburgerIcon } from '@chakra-ui/icons';
+import { sections } from 'utils/config';
 
-import { ReactComponent as Logo } from "assets/img/logo.svg";
-import { Link as RouterLink } from "react-router-dom";
+import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import { Link as RouterLink } from 'react-router-dom';
 
 const NavLink = ({ link, children }) => (
   <Link
     as={RouterLink}
     px={2}
     py={1}
-    rounded={"md"}
+    rounded="md"
     _active={{
-      color: "brand.500",
+      color: 'brand.500',
     }}
     _hover={{
-      textDecoration: "none",
-      color: useColorModeValue("dark.100"),
+      textDecoration: 'none',
+      color: useColorModeValue('dark.100'),
     }}
     color="brand.100"
     to={link}
@@ -46,14 +46,14 @@ function Navigation() {
             <Logo />
           </Box>
           <IconButton
-            size={"md"}
+            size="md"
             icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
             aria-label="Open Menu"
-            display={{ md: "none" }}
+            display={{ md: 'none' }}
             onClick={isOpen ? onClose : onOpen}
           />
           {/* nav items */}
-          <HStack as="nav" spacing={4} display={{ base: "none", md: "flex" }}>
+          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
             {sections.map((item) => (
               <NavLink link={item.link} key={item.name}>
                 {item.name}
@@ -63,7 +63,7 @@ function Navigation() {
         </Flex>
 
         {isOpen ? (
-          <Box pb={4} display={{ md: "none" }}>
+          <Box pb={4} display={{ md: 'none' }}>
             <Stack as="nav" spacing={4}>
               {sections.map((item) => (
                 <NavLink link={item.link} key={item.name}>

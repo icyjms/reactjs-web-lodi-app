@@ -1,4 +1,3 @@
-import { useField } from 'formik';
 import {
   FormControl,
   FormErrorMessage,
@@ -6,6 +5,7 @@ import {
   Input,
   InputGroup,
 } from '@chakra-ui/react';
+import { useField } from 'formik';
 
 const FormItem = ({ name, label, leftAddon, rightAddon, ...rest }) => {
   const [field, meta] = useField({ name, ...rest });
@@ -16,12 +16,19 @@ const FormItem = ({ name, label, leftAddon, rightAddon, ...rest }) => {
         fontSize="smaller"
         color="gray.500"
         htmlFor={name}
-        >
+      >
         {label}
       </FormLabel>
       <InputGroup>
         {leftAddon}
-        <Input outline="none" bg="gray.100" borderColor="gray.100" {...field} {...rest} />
+        <Input
+          w="full"
+          outline="none"
+          bg="gray.100"
+          borderColor="gray.100"
+          {...field}
+          {...rest}
+        />
         {rightAddon}
       </InputGroup>
       {meta.touched && meta.error && (

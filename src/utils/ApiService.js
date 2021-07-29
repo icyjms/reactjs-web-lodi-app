@@ -3,8 +3,8 @@ import axios from 'axios';
 const url = process.env.REACT_APP_URL;
 const token = process.env.REACT_APP_TOKEN;
 
-const handleSuccess = response => response.data;
-const handleError = error => {
+const handleSuccess = (response) => response.data;
+const handleError = (error) => {
   if (error.response) {
     // The request was made and the server responded with a status code
     // that falls out of the range of 2xx
@@ -39,7 +39,7 @@ const ApiService = () => {
   const put = (path, body) => {
     return service.put(path, body);
   };
-  const remove = path => {
+  const remove = (path) => {
     service.delete(path);
   };
 

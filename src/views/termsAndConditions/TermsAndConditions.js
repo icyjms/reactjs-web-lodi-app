@@ -1,6 +1,6 @@
-import { Heading, Text, Container, Box } from '@chakra-ui/react';
-import { ArrowBackIcon } from '@chakra-ui/icons'
-import { useHistory } from "react-router-dom";
+import { Box, Container, Heading, Text } from '@chakra-ui/react';
+import { ArrowBackIcon } from '@chakra-ui/icons';
+import { useHistory } from 'react-router-dom';
 
 import Section from 'components/Section';
 
@@ -10,7 +10,14 @@ function TermsAndConditions() {
     <Section>
       <Container maxW="12xl" p={[4, 8, 16]}>
         <Box textAlign="justify">
-          <ArrowBackIcon w={10} h={10} cursor="pointer" onClick={()=>{history.goBack()}}/>
+          <ArrowBackIcon
+            w={10}
+            h={10}
+            cursor="pointer"
+            onClick={() => {
+              history.goBack();
+            }}
+          />
           <Heading
             my={[2, 4, 16]}
             lineHeight={1.1}
