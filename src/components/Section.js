@@ -1,9 +1,9 @@
-import { Box } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import { useEffect, useRef } from 'react';
 
 import useIntersectionObserver from 'utils/useIntersectionObserver';
 
-const Section = ({ id, children, minHeight }) => {
+const Section = ({ id, children }) => {
   const threshold = 0.4;
   const ref = useRef(null);
   const entry = useIntersectionObserver(ref, { threshold });
@@ -24,9 +24,15 @@ const Section = ({ id, children, minHeight }) => {
   }, [isVisible, entry]);
 
   return (
-    <Box id={id} as="section" minHeight={minHeight || '100vh'} {...{ ref }}>
+    <Flex
+      id={id}
+      alignItems="center"
+      as="section"
+      minHeight={{ base: '70vh', lg: '100vh', '2xl': '90vh' }}
+      {...{ ref }}
+    >
       {children}
-    </Box>
+    </Flex>
   );
 };
 
