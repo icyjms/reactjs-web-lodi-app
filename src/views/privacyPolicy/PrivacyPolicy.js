@@ -6,7 +6,7 @@ function PrivacyPolicy() {
   return (
     <Section>
       <Container maxW="12xl" p={[4, 8, 16]}>
-        <Box>
+        <Box textAlign="justify">
           <Heading
             my={[2, 4, 16]}
             lineHeight={1.1}
@@ -25,7 +25,7 @@ function PrivacyPolicy() {
           <p>&nbsp;</p>
           <p>
             1.
-            <strong>Introduction</strong>
+            <strong> Introduction</strong>
           </p>
           <p>
             Welcome to&nbsp;<strong>Logistikus Express, Incorporated</strong>.
@@ -55,8 +55,9 @@ function PrivacyPolicy() {
             <strong>&ldquo;agreement&rdquo;</strong>
             ).
           </p>
+          <p>&nbsp;</p>
           <p>
-            <strong>2. Definitions</strong>
+            2. <strong>Definitions</strong>
           </p>
           <p>
             <strong>SERVICE</strong>&nbsp;means the&nbsp;lodi.ph&nbsp;website
@@ -99,18 +100,21 @@ function PrivacyPolicy() {
             The User corresponds to the Data Subject, who is the subject of
             Personal Data.
           </p>
+          <p>&nbsp;</p>
           <p>
             3.
-            <strong>Information Collection and Use</strong>
+            <strong> Information Collection and Use</strong>
           </p>
           <p>
             We collect several different types of information for various
             purposes to provide and improve our Service to you.
           </p>
+          <p>&nbsp;</p>
           <p>
             4.
-            <strong>Types of Data Collected</strong>
+            <strong> Types of Data Collected</strong>
           </p>
+          <p>&nbsp;</p>
           <p>
             <strong>Personal Data</strong>
           </p>
@@ -132,6 +136,7 @@ function PrivacyPolicy() {
             of interest to you. You may opt out of receiving any, or all, of
             these communications from us by following the unsubscribe link.
           </p>
+          <p>&nbsp;</p>
           <p>
             <strong>Usage Data</strong>
           </p>
@@ -155,6 +160,7 @@ function PrivacyPolicy() {
             type of Internet browser you use, unique device identifiers and
             other diagnostic data.
           </p>
+          <p>&nbsp;</p>
           <p>
             <strong>Location Data</strong>
           </p>
@@ -168,6 +174,7 @@ function PrivacyPolicy() {
             You can enable or disable location services when you use our Service
             at any time by way of your device settings.
           </p>
+          <p>&nbsp;</p>
           <p>
             <strong>Tracking Cookies Data</strong>
           </p>
@@ -223,9 +230,10 @@ function PrivacyPolicy() {
             status, family members, social security (or other taxpayer
             identification) number, office location and other data.
           </p>
+          <p>&nbsp;</p>
           <p>
             5.
-            <strong>Use of Data</strong>
+            <strong> Use of Data</strong>
           </p>
           <p>
             Logistikus Express, Incorporated&nbsp;uses the collected data for
@@ -267,9 +275,10 @@ function PrivacyPolicy() {
             information;
           </p>
           <p>0.13. for any other purpose with your consent.</p>
+          <p>&nbsp;</p>
           <p>
             6.
-            <strong>Retention of Data</strong>
+            <strong> Retention of Data</strong>
           </p>
           <p>
             We will retain your Personal Data only for as long as is necessary
@@ -286,9 +295,10 @@ function PrivacyPolicy() {
             functionality of our Service, or we are legally obligated to retain
             this data for longer time periods.
           </p>
+          <p>&nbsp;</p>
           <p>
             7.
-            <strong>Transfer of Data</strong>
+            <strong> Transfer of Data</strong>
           </p>
           <p>
             Your information, including Personal Data, may be transferred to
@@ -314,9 +324,10 @@ function PrivacyPolicy() {
             there are adequate controls in place including the security of your
             data and other personal information.
           </p>
+          <p>&nbsp;</p>
           <p>
             8.
-            <strong>Disclosure of Data</strong>
+            <strong> Disclosure of Data</strong>
           </p>
           <p>
             We may disclose personal information that we collect, or you
@@ -361,9 +372,10 @@ function PrivacyPolicy() {
             protect the rights, property, or safety of the Company, our
             customers, or others.
           </p>
+          <p>&nbsp;</p>
           <p>
             9.
-            <strong>Security of Data</strong>
+            <strong> Security of Data</strong>
           </p>
           <p>
             The security of your data is important to us but remember that no
@@ -384,9 +396,10 @@ function PrivacyPolicy() {
             You can enable or disable Do Not Track by visiting the Preferences
             or Settings page of your web browser.
           </p>
+          <p>&nbsp;</p>
           <p>
-            13.
-            <strong>Service Providers</strong>
+            10.
+            <strong> Service Providers</strong>
           </p>
           <p>
             We may employ third party companies and individuals to facilitate
@@ -399,29 +412,33 @@ function PrivacyPolicy() {
             perform these tasks on our behalf and are obligated not to disclose
             or use it for any other purpose.
           </p>
+          <p>&nbsp;</p>
           <p>
-            14.&nbsp;<strong>Analytics</strong>
+            11.&nbsp;<strong>Analytics</strong>
           </p>
           <p>
             We may use third-party Service Providers to monitor and analyze the
             use of our Service.
           </p>
+          <p>&nbsp;</p>
           <p>
-            15.&nbsp;<strong>CI/CD tools</strong>
+            12.&nbsp;<strong>CI/CD tools</strong>
           </p>
           <p>
             We may use third-party Service Providers to automate the development
             process of our Service.
           </p>
+          <p>&nbsp;</p>
           <p>
-            16.&nbsp;<strong>Advertising</strong>
+            13.&nbsp;<strong>Advertising</strong>
           </p>
           <p>
             We may use third-party Service Providers to show advertisements to
             you to help support and maintain our Service.
           </p>
+          <p>&nbsp;</p>
           <p>
-            17.&nbsp;<strong>Behavioral Remarketing</strong>
+            14.&nbsp;<strong>Behavioral Remarketing</strong>
           </p>
           <p>
             We may use remarketing services to advertise on third party websites
@@ -429,8 +446,9 @@ function PrivacyPolicy() {
             use cookies to inform, optimise and serve ads based on your past
             visits to our Service.
           </p>
+          <p>&nbsp;</p>
           <p>
-            18.&nbsp;<strong>Payments</strong>
+            15.&nbsp;<strong>Payments</strong>
           </p>
           <p>
             We may provide paid products and/or services within Service. In that
@@ -447,8 +465,9 @@ function PrivacyPolicy() {
             American Express and Discover. PCI-DSS requirements help ensure the
             secure handling of payment information.
           </p>
+          <p>&nbsp;</p>
           <p>
-            19.&nbsp;<strong>Links to Other Sites</strong>
+            16.&nbsp;<strong>Links to Other Sites</strong>
           </p>
           <p>
             Our Service may contain links to other sites that are not operated
@@ -462,9 +481,8 @@ function PrivacyPolicy() {
             services.
           </p>
           <p>&nbsp;</p>
-          <p>&nbsp;</p>
           <p>
-            20.&nbsp;<strong>Children&rsquo;s Privacy</strong>
+            17.&nbsp;<strong>Children&rsquo;s Privacy</strong>
           </p>
           <p>
             Our Services are not intended for use by children under the age of
@@ -479,8 +497,9 @@ function PrivacyPolicy() {
             parental consent, we take steps to remove that information from our
             servers.
           </p>
+          <p>&nbsp;</p>
           <p>
-            21.&nbsp;<strong>Changes to This Privacy Policy</strong>
+            18.&nbsp;<strong>Changes to This Privacy Policy</strong>
           </p>
           <p>
             We may update our Privacy Policy from time to time. We will notify
@@ -496,8 +515,9 @@ function PrivacyPolicy() {
             changes. Changes to this Privacy Policy are effective when they are
             posted on this page.
           </p>
+          <p>&nbsp;</p>
           <p>
-            22.&nbsp;<strong>Contact Us</strong>
+            19.&nbsp;<strong>Contact Us</strong>
           </p>
           <p>
             If you have any questions about this Privacy Policy, please contact
