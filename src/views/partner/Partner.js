@@ -9,15 +9,15 @@ import {
   HStack,
   Icon,
   VStack,
-} from '@chakra-ui/react';
-import { CheckIcon } from '@chakra-ui/icons';
+} from "@chakra-ui/react";
+import { CheckIcon } from "@chakra-ui/icons";
 
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
-import { offers } from 'utils/config';
+import { ReactComponent as Logo } from "assets/img/logo.svg";
+import { offers } from "utils/config";
 
-import { ReactComponent as PartnerImg } from 'assets/img/partner.svg';
-import GetNotified from 'components/GetNotified';
-import Section from 'components/Section';
+import { ReactComponent as PartnerImg } from "assets/img/partner.svg";
+import GetNotified from "components/GetNotified";
+import Section from "components/Section";
 
 function Partner() {
   return (
@@ -27,13 +27,13 @@ function Partner() {
           <Heading
             color="dark.100"
             mb={5}
-            fontSize={{ base: '4xl', md: '6xl' }}
+            fontSize={{ base: "4xl", md: "6xl" }}
           >
             BE A &nbsp;
-            <Box width={{base: '62px', md: "96px"}} display="inline-block">
+            <Box width={{ base: "62px", md: "96px" }} display="inline-block">
               <Logo width="100%" height="100%" />
-            </Box>&nbsp;
-            PARTNER
+            </Box>
+            &nbsp; PARTNER
           </Heading>
           <Text fontSize="xl" color="gray.400">
             Give your restaurant and online business a boost
@@ -45,7 +45,7 @@ function Partner() {
             market online!
           </Text>
         </Box>
-        <Stack direction={{ base: 'column', lg: 'row' }}>
+        <Stack direction={{ base: "column", lg: "row" }}>
           <Flex direction="column" justifyContent="space-evenly">
             <SimpleGrid
               templateRows="repeat(4, 1fr)"
