@@ -1,5 +1,5 @@
-import { Box, Container, Heading, Text } from '@chakra-ui/react';
 import { ArrowBackIcon } from '@chakra-ui/icons';
+import { Box, Container, Heading, Text } from '@chakra-ui/react';
 import { useHistory } from 'react-router-dom';
 
 import Section from 'components/Section';
