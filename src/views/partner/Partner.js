@@ -13,9 +13,9 @@ import {
 } from "@chakra-ui/react";
 import { CheckIcon } from "@chakra-ui/icons";
 
-import LodiText from "components/LodiText";
+import { ReactComponent as Logo } from "assets/img/logo.svg";
 import { offers } from "utils/config";
-// import { ReactComponent as LodiLogo } from "assets/img/logo.svg";
+
 import { ReactComponent as PartnerImg } from "assets/img/partner.svg";
 import GetNotified from "components/GetNotified";
 import Section from "components/Section";
@@ -32,9 +32,14 @@ function Partner() {
                 mb={5}
                 fontSize={{ base: "4xl", md: "6xl" }}
               >
-                BE A
-                <LodiText />
-                PARTNER
+                BE A &nbsp;
+                <Box
+                  width={{ base: "62px", md: "96px" }}
+                  display="inline-block"
+                >
+                  <Logo width="100%" height="100%" />
+                </Box>
+                &nbsp; PARTNER
               </Heading>
               <Text fontSize="xl" color="gray.400">
                 Give your restaurant and online business a boost
@@ -68,7 +73,7 @@ function Partner() {
                     </HStack>
                   ))}
                 </SimpleGrid>
-                <GetNotified />
+                <GetNotified index_key="1" />
               </Flex>
             </Stack>
           </Flex>

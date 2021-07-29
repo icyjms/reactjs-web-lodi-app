@@ -2,20 +2,24 @@ import { Icon } from '@chakra-ui/icon';
 const sections = [
   {
     name: 'Home',
-    link: '#',
+    link: '/',
   },
   {
-    name: 'How It Works',
-    link: '#how-it-works',
+    name: 'About Us',
+    link: '/',
   },
-  {
-    name: 'Be a LODI RIder',
-    link: '#lodi-rider',
-  },
-  {
-    name: 'Contact Us',
-    link: '#contact-us',
-  },
+  // {
+  //   name: 'How It Works',
+  //   link: '#how-it-works',
+  // },
+  // {
+  //   name: 'Be a LODI RIder',
+  //   link: '#lodi-rider',
+  // },
+  // {
+  //   name: 'Contact Us',
+  //   link: '#contact-us',
+  // },
 ];
 
 const features = [
