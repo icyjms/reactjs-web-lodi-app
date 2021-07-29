@@ -6,11 +6,15 @@ import {
   Heading,
   Stack,
   Text,
+  useToast,
 } from '@chakra-ui/react';
+import { useRef } from 'react';
 
 import GetNotified from 'components/GetNotified';
 import Section from 'components/Section';
+import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
 import { ReactComponent as DeviceImg } from 'assets/img/pre-launch-device.svg';
+import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
 import { Link } from 'react-router-dom';
 import { ReactComponent as Logo } from 'assets/img/logo.svg';
 
@@ -21,6 +25,17 @@ function Home() {
     // window.history.pushState({}, document.title, path);
     window.location.href = path;
   };
+
+  const toast = useToast();
+  const toastIdRef = useRef();
+
+  function addToast() {
+    toastIdRef.current = toast({
+      description: 'Soon to be available',
+      position: 'top-right',
+      isClosable: true,
+    });
+  }
 
   return (
     <Section minHeight="70vh">
@@ -86,6 +101,20 @@ function Home() {
                   MAGING LODI RIDER
                 </Button>
               </Stack>
+            </Stack>
+            <Stack>
+              <Flex>
+                <Box maxW={'3xl'} py={10}>
+                  <Text color="gray.500">Coming Soon!</Text>
+                  <Box onClick={addToast} as="button">
+                    <AppStoreLogo />
+                  </Box>
+                  &nbsp;&nbsp;&nbsp;
+                  <Box onClick={addToast} as="button">
+                    <GooglePlayLogo />
+                  </Box>
+                </Box>
+              </Flex>
             </Stack>
           </Stack>
           {
