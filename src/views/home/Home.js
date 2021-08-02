@@ -91,15 +91,19 @@ function Home() {
             >
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
-                <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                  MAGING LODI PARTNER
-                </Button>
+                <Box>
+                  <Button bg="brand.100" onClick={() => goTo('#partner')}>
+                    MAGING LODI PARTNER
+                  </Button>
+                </Box>
               </Stack>
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
-                <Button as={Link} to="/rider" backgroundColor="cyan">
-                  MAGING LODI RIDER
-                </Button>
+                <Box>
+                  <Button as={Link} to="/rider" backgroundColor="cyan">
+                    MAGING LODI RIDER
+                  </Button>
+                </Box>
               </Stack>
             </Stack>
             <Stack>
