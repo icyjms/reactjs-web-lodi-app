@@ -61,7 +61,7 @@ function Footer() {
           <Spacer />
           <Stack>
             <Flex>
-              <Box /* as={Stack} */ maxW={'3xl'} py={16}>
+              <Box /* as={Stack} */ maxW={'3xl'} py={{ base: 10, md: 16 }}>
                 <Box onClick={addToast} as="button">
                   <AppStoreLogo />
                 </Box>
@@ -73,7 +73,7 @@ function Footer() {
             </Flex>
           </Stack>
         </Stack>
-        <Box>
+        <Box paddingBottom={5}>
           <Text color="light.100" fontWeight="light" fontSize="smaller">
             © {new Date().getFullYear()} LODI. All rights reserved
           </Text>

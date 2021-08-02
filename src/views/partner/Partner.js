@@ -34,7 +34,7 @@ function Partner() {
               >
                 BE A &nbsp;
                 <Box
-                  width={{ base: '62px', md: '96px' }}
+                  width={{ base: '60px', md: '96px', lg: '160px' }}
                   display="inline-block"
                 >
                   <Logo width="100%" height="100%" />

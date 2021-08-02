@@ -65,7 +65,7 @@ function Home() {
                 >
                   Parating na ang bagong &nbsp;
                   <Box
-                    width={{ base: '55px', sm: '80px', lg: '120px' }}
+                    width={{ base: '60px', sm: '80px', lg: '160px' }}
                     display="inline-block"
                   >
                     <Logo width="100%" height="100%" />
