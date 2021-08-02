@@ -141,7 +141,7 @@ const GetNotified = ({ index_key }) => {
               <FormItem
                 name="email"
                 type="email"
-                placeholder="Email"
+                placeholder="Type your email"
                 value={values.email || ''}
                 onChange={(event) => {
                   handleChange(event);

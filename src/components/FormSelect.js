@@ -19,7 +19,7 @@ const FormSelect = ({ name, children, label }) => {
       >
         {label}
       </FormLabel>
-      <Select bg="gray.100" borderColor="gray.100" {...field}>
+      <Select bg="gray.100" borderColor="gray.900" {...field}>
         {children}
       </Select>
       {meta.touched && meta.error && (
