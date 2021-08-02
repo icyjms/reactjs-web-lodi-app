@@ -61,10 +61,11 @@ function Footer() {
           <Spacer />
           <Stack>
             <Flex>
-              <Box as={Stack} maxW={'3xl'} py={10}>
+              <Box /* as={Stack} */ maxW={'3xl'} py={16}>
                 <Box onClick={addToast} as="button">
                   <AppStoreLogo />
                 </Box>
+                &nbsp;
                 <Box onClick={addToast} as="button">
                   <GooglePlayLogo />
                 </Box>
