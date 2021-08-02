@@ -42,7 +42,7 @@ function Footer() {
                 columns={{ base: 1, sm: 2, md: 4 }}
                 spacing={4}
               >
-                <Link color="light.100" href="#">
+                <Link color="light.100" href="/about">
                   About Us
                 </Link>
                 <Link as={RouterLink} color="light.100" to="/privacy-policy">
