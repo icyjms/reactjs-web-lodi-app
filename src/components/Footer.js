@@ -31,7 +31,10 @@ function Footer() {
   return (
     <Box w="full" bg="dark.100">
       <Container maxW="12xl" px={[4, 8, 16]}>
-        <Stack direction={{ base: 'column', lg: 'row' }}>
+        <Stack
+          direction={{ base: 'column', lg: 'row' }}
+          height={{ base: '', md: '110px' }}
+        >
           <Flex direction="column" justifyContent="space-evenly">
             <Box as={Stack} maxW={'3xl'} py={10}>
               <Box py={4}>
@@ -40,7 +43,7 @@ function Footer() {
               <SimpleGrid
                 justifyContent="center"
                 columns={{ base: 1, sm: 2, md: 4 }}
-                spacing={4}
+                // spacing={2}
               >
                 <Link color="light.100" href="/about">
                   About Us
@@ -59,19 +62,33 @@ function Footer() {
             </Box>
           </Flex>
           <Spacer />
-          <Stack>
-            <Flex>
-              <Box /* as={Stack} */ maxW={'3xl'} py={{ base: 10, md: 16 }}>
-                <Box onClick={addToast} as="button">
-                  <AppStoreLogo />
-                </Box>
-                &nbsp;
-                <Box onClick={addToast} as="button">
-                  <GooglePlayLogo />
-                </Box>
-              </Box>
-            </Flex>
-          </Stack>
+          <Box
+            paddingTop={{ base: '0px', md: '40px' }}
+            // paddingBottom={{ base: '30px' }}
+          >
+            <Text color="gray.500">Follow Us</Text>
+            <Box onClick={addToast} as="button">
+              <AppStoreLogo />
+            </Box>
+            &nbsp;
+            <Box onClick={addToast} as="button">
+              <GooglePlayLogo />
+            </Box>
+          </Box>
+          <Spacer />
+          <Box
+            paddingTop={{ base: '0px', md: '40px' }}
+            // paddingBottom={{ base: '30px' }}
+          >
+            <Text color="gray.500">Available Soon!</Text>
+            <Box onClick={addToast} as="button">
+              <AppStoreLogo />
+            </Box>
+            &nbsp;
+            <Box onClick={addToast} as="button">
+              <GooglePlayLogo />
+            </Box>
+          </Box>
         </Stack>
         <Box paddingBottom={5}>
           <Text color="light.100" fontWeight="light" fontSize="smaller">

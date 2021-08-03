@@ -223,7 +223,7 @@ function Rider() {
                     bg="cyan"
                     isFullWidth
                   >
-                    TRY NOW
+                    REGISTER
                   </Button>
                 </Form>
               )}

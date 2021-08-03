@@ -1,6 +1,7 @@
 import {
   Box,
   Button,
+  Center,
   Container,
   Flex,
   Heading,
@@ -16,7 +17,8 @@ import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
 import { ReactComponent as DeviceImg } from 'assets/img/pre-launch-device.svg';
 import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
 import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
+// import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import IdolText from '../../components/IdolText';
 
 function Home() {
   const subtext = 'Get notified when we launch';
@@ -63,17 +65,18 @@ function Home() {
                   color="dark.100"
                   style={{ textTransform: 'uppercase' }}
                 >
-                  Parating na ang bagong &nbsp;
-                  <Box
+                  Parating na ang bagong
+                  {/* <Box
                     width={{ base: '60px', sm: '80px', lg: '160px' }}
                     display="inline-block"
                   >
                     <Logo width="100%" height="100%" />
-                  </Box>
-                  &nbsp; ng delivery!
+                  </Box> */}
+                  <IdolText />
+                  ng delivery!
                 </Text>
               </Heading>
-              <Stack>
+              <Stack marginBottom="35px !important">
                 <Text
                   color="gray.500"
                   fontSize={{ base: '1xl', sm: '2xl', lg: '3xl' }}
@@ -93,7 +96,7 @@ function Home() {
                 <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
                 <Box>
                   <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                    MAGING LODI PARTNER
+                    BE A LODI PARTNER
                   </Button>
                 </Box>
               </Stack>
@@ -101,7 +104,7 @@ function Home() {
                 <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
                 <Box>
                   <Button as={Link} to="/rider" backgroundColor="cyan">
-                    MAGING LODI RIDER
+                    BE A LODI RIDER
                   </Button>
                 </Box>
               </Stack>
@@ -109,7 +112,7 @@ function Home() {
             <Stack>
               <Flex>
                 <Box maxW="3xl" py={10}>
-                  <Text color="gray.500">Coming Soon!</Text>
+                  <Text color="gray.500">Available Soon!</Text>
                   <Box onClick={addToast} as="button">
                     <AppStoreLogo />
                   </Box>
@@ -131,9 +134,11 @@ function Home() {
               // px={[4, 8, 12]}
             >
               {
-                <Box position="relative" width="full" overflow="hidden">
+                // <Box position="relative" width="full" overflow="hidden">
+                <Center>
                   <DeviceImg />
-                </Box>
+                </Center>
+                // </Box>
               }
             </Flex>
           }

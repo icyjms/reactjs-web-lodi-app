@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import {
   Box,
+  Button,
   Container,
   Flex,
   HStack,
@@ -59,7 +60,9 @@ function Navigation() {
       <Box>
         <Flex h={16} alignItems="center" justifyContent="space-between">
           <Box as={RouterLink} to="/">
-            <Logo />
+            <div className="logo">
+              <Logo />
+            </div>
           </Box>
           <IconButton
             size="md"
@@ -75,6 +78,11 @@ function Navigation() {
                 {item.name}
               </NavLink>
             ))}
+            <Box as={RouterLink} to="/rider">
+              <Button backgroundColor="cyan" color="white">
+                BE A LODI RIDER
+              </Button>
+            </Box>
           </HStack>
         </Flex>
 
@@ -86,6 +94,9 @@ function Navigation() {
                   {item.name}
                 </NavLink>
               ))}
+              <Box as={RouterLink} to="/rider">
+                <Button backgroundColor="cyan">BE A LODI RIDER</Button>
+              </Box>
             </Stack>
           </Box>
         ) : null}

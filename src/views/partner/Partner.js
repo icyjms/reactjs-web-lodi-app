@@ -13,7 +13,8 @@ import {
 } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
 
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import LodiText from '../../components/LodiText';
+// import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import { offers } from 'utils/config';
 
 import GetNotified from 'components/GetNotified';
@@ -32,20 +33,21 @@ function Partner() {
                 mb={5}
                 fontSize={{ base: '4xl', md: '6xl', lg: '7xl', '2xl': '8xl' }}
               >
-                BE A &nbsp;
-                <Box
+                BE A
+                {/* <Box
                   width={{ base: '60px', md: '96px', lg: '160px' }}
                   display="inline-block"
                 >
                   <Logo width="100%" height="100%" />
-                </Box>
-                &nbsp; PARTNER
+                </Box> */}
+                <LodiText />
+                PARTNER
               </Heading>
               <Text
                 fontSize={{ base: 'md', md: 'xl', lg: 'xl', '2xl': '2xl' }}
                 color="gray.400"
               >
-                Give your restaurant and online business a boost
+                Give your business a boost
               </Text>
             </Box>
             <Box pb={8}>
@@ -62,7 +64,7 @@ function Partner() {
               >
                 <SimpleGrid
                   autoFlow={{ base: 'row', lg: 'column' }}
-                  templateRows={{ lg: 'repeat(4, 1fr)' }}
+                  templateRows={{ lg: 'repeat(3, 1fr)' }}
                   justifyContent="center"
                   columns={{ base: 1, lg: 2 }}
                   spacing={8}

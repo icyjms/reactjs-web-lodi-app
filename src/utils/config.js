@@ -171,12 +171,11 @@ const features = [
 ];
 
 const offers = [
+  'Purely delivery charge',
   'No percentage from your sales',
   'No additional manpower for in-house delivery service',
-  'Purely delivery charge',
   'Manage your deliveries',
   'Easy order tracking',
-  'Dedicated partner support',
   'Single booking, multiple deliveries',
 ];
 
