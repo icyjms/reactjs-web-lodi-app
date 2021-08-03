@@ -65,7 +65,7 @@ function Home() {
                 >
                   Parating na ang bagong &nbsp;
                   <Box
-                    width={{ base: '55px', sm: '80px', lg: '120px' }}
+                    width={{ base: '60px', sm: '80px', lg: '160px' }}
                     display="inline-block"
                   >
                     <Logo width="100%" height="100%" />
@@ -91,15 +91,19 @@ function Home() {
             >
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
-                <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                  MAGING LODI PARTNER
-                </Button>
+                <Box>
+                  <Button bg="brand.100" onClick={() => goTo('#partner')}>
+                    MAGING LODI PARTNER
+                  </Button>
+                </Box>
               </Stack>
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
-                <Button as={Link} to="/rider" backgroundColor="cyan">
-                  MAGING LODI RIDER
-                </Button>
+                <Box>
+                  <Button as={Link} to="/rider" backgroundColor="cyan">
+                    MAGING LODI RIDER
+                  </Button>
+                </Box>
               </Stack>
             </Stack>
             <Stack>

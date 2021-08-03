@@ -25,7 +25,7 @@ const FormItem = ({ name, label, leftAddon, rightAddon, ...rest }) => {
           w="full"
           outline="none"
           bg="gray.100"
-          borderColor="gray.100"
+          borderColor="gray.900"
           {...field}
           {...rest}
         />

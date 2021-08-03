@@ -42,7 +42,7 @@ function Footer() {
                 columns={{ base: 1, sm: 2, md: 4 }}
                 spacing={4}
               >
-                <Link color="light.100" href="#">
+                <Link color="light.100" href="/about">
                   About Us
                 </Link>
                 <Link as={RouterLink} color="light.100" to="/privacy-policy">
@@ -61,10 +61,11 @@ function Footer() {
           <Spacer />
           <Stack>
             <Flex>
-              <Box as={Stack} maxW={'3xl'} py={10}>
+              <Box /* as={Stack} */ maxW={'3xl'} py={{ base: 10, md: 16 }}>
                 <Box onClick={addToast} as="button">
                   <AppStoreLogo />
                 </Box>
+                &nbsp;
                 <Box onClick={addToast} as="button">
                   <GooglePlayLogo />
                 </Box>
@@ -72,7 +73,7 @@ function Footer() {
             </Flex>
           </Stack>
         </Stack>
-        <Box>
+        <Box paddingBottom={5}>
           <Text color="light.100" fontWeight="light" fontSize="smaller">
             © {new Date().getFullYear()} LODI. All rights reserved
           </Text>

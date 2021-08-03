@@ -1,23 +1,24 @@
-import { ArrowBackIcon } from '@chakra-ui/icons';
+// import { ArrowBackIcon } from '@chakra-ui/icons';
 import { Box, Container, Heading, Text } from '@chakra-ui/react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
+import { topFunction } from '../../utils/helpers';
 
 import Section from 'components/Section';
 
 function PrivacyPolicy() {
-  let history = useHistory();
+  // let history = useHistory();
   return (
     <Section>
       <Container maxW="12xl" p={[4, 8, 16]}>
         <Box textAlign="justify">
-          <ArrowBackIcon
+          {/* <ArrowBackIcon
             w={10}
             h={10}
             cursor="pointer"
             onClick={() => {
               history.goBack();
             }}
-          />
+          /> */}
           <Heading
             my={[2, 4, 16]}
             lineHeight={1.1}
@@ -537,6 +538,9 @@ function PrivacyPolicy() {
           <p>&nbsp;</p>
           <p>&nbsp;</p>
         </Box>
+        <button onClick={() => topFunction()} id="goto-top" title="Go to top">
+          Go to Top
+        </button>
       </Container>
     </Section>
   );
