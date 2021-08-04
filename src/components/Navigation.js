@@ -100,7 +100,9 @@ function Navigation() {
                 </NavLink>
               ))}
               <Box as={RouterLink} to="/rider">
-                <Button backgroundColor="cyan">BE A LODI RIDER</Button>
+                <Button backgroundColor="cyan" color="white">
+                  BE A LODI RIDER
+                </Button>
               </Box>
             </Stack>
           </Box>
