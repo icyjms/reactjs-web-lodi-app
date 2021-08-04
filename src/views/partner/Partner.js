@@ -66,7 +66,7 @@ function Partner() {
                   templateRows={{ lg: 'repeat(3, 1fr)' }}
                   justifyContent="center"
                   columns={{ base: 1, lg: 2 }}
-                  spacing={8}
+                  spacing={4}
                 >
                   {offers.map((item) => (
                     <HStack key={item} align="top">
@@ -88,7 +88,6 @@ function Partner() {
                     </HStack>
                   ))}
                 </SimpleGrid>
-                <GetNotified index_key="1" />
               </Flex>
             </Stack>
           </Flex>
@@ -96,6 +95,7 @@ function Partner() {
             <PartnerImg />
           </Center>
         </Stack>
+        <GetNotified index_key="1" />
       </Container>
     </Section>
   );

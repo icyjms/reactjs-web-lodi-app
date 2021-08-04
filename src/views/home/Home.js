@@ -21,7 +21,7 @@ import { Link } from 'react-router-dom';
 import IdolText from '../../components/IdolText';
 
 function Home() {
-  const subtext = 'Get notified when we launch';
+  // const subtext = 'Get notified when we launch';
 
   const goTo = (path) => {
     // window.history.pushState({}, document.title, path);
@@ -77,14 +77,6 @@ function Home() {
                 </Text>
               </Heading>
               <Stack marginBottom="35px !important">
-                <Text
-                  color="gray.500"
-                  fontSize={{ base: '1xl', sm: '2xl', lg: '3xl' }}
-                >
-                  {subtext}
-                  {/* Gusto mo bang maging LODI sa negosyo?
-              <br /> Be a LODI partner! */}
-                </Text>
                 <GetNotified index_key="0" />
               </Stack>
             </Stack>
@@ -103,7 +95,7 @@ function Home() {
               <Stack direction="column">
                 <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
                 <Box>
-                  <Button as={Link} to="/rider" backgroundColor="cyan">
+                  <Button as={Link} to="/rider" backgroundColor="#E3E3E3">
                     BE A LODI RIDER
                   </Button>
                 </Box>

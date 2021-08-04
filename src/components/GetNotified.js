@@ -1,5 +1,12 @@
 import FormItem from 'components/FormItem';
-import { Box, Button, Stack, VisuallyHidden, useToast } from '@chakra-ui/react';
+import {
+  Box,
+  Button,
+  Stack,
+  Text,
+  VisuallyHidden,
+  useToast,
+} from '@chakra-ui/react';
 import { Form, Formik } from 'formik';
 import { object, string } from 'yup';
 import { useCallback, useReducer, useRef } from 'react';
@@ -132,33 +139,51 @@ const GetNotified = ({ index_key }) => {
       >
         {({ handleChange, errors, touched, handleSubmit }) => (
           <Form onSubmit={handleSubmit}>
-            <Stack
-              maxW="xl"
-              align="top"
-              spacing={{ base: 4, sm: 6 }}
-              direction={{ base: 'column', md: 'row' }}
+            <Box
+              className="card"
+              paddingX={{ base: 5, lg: 20 }}
+              paddingY={{ base: 5, lg: 10 }}
+              marginY={5}
+              width="fit-content"
             >
-              <FormItem
-                name="email"
-                type="email"
-                placeholder="Type your email"
-                value={values.email || ''}
-                onChange={(event) => {
-                  handleChange(event);
-                  handleInputChange({ event, errors, touched });
-                }}
-              />
-              <Box mt="8px!important">
-                <Button
-                  bg="brand.100"
-                  onClick={handleNotified}
-                  {...{ isLoading: loading }}
-                  loadingText="Submitting"
-                >
-                  GET NOTIFIED
-                </Button>
-              </Box>
-            </Stack>
+              <Text
+                color="black"
+                fontSize={{ base: '1xl', sm: '2xl', lg: '3xl' }}
+              >
+                Get notified when we launch
+                {/* Gusto mo bang maging LODI sa negosyo?
+              <br /> Be a LODI partner! */}
+              </Text>
+              <Stack
+                maxW="xl"
+                align="top"
+                spacing={{ base: 4, sm: 6 }}
+                direction={{ base: 'column', md: 'row' }}
+              >
+                <FormItem
+                  name="email"
+                  type="email"
+                  placeholder="Type your email"
+                  value={values.email || ''}
+                  onChange={(event) => {
+                    handleChange(event);
+                    handleInputChange({ event, errors, touched });
+                  }}
+                />
+                <Box mt="8px!important">
+                  <Button
+                    // bg="brand.100"
+                    bg="black"
+                    color="white"
+                    onClick={handleNotified}
+                    {...{ isLoading: loading }}
+                    loadingText="Submitting"
+                  >
+                    GET NOTIFIED
+                  </Button>
+                </Box>
+              </Stack>
+            </Box>
           </Form>
         )}
       </Formik>

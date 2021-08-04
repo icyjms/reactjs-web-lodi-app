@@ -58,10 +58,15 @@ function Navigation() {
   return (
     <Container maxW="12xl" px={[4, 8, 16]}>
       <Box>
-        <Flex h={16} alignItems="center" justifyContent="space-between">
+        <Flex
+          h={16}
+          alignItems="center"
+          justifyContent="space-between"
+          style={{ boxShadow: '0 10px 8px 0 rgb(0 0 0 / 10%' }}
+        >
           <Box as={RouterLink} to="/">
-            <div className="logo">
-              <Logo />
+            <div /* className="logo" */>
+              <Logo width={105} height={75} />
             </div>
           </Box>
           <IconButton
