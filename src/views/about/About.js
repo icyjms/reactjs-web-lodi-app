@@ -25,7 +25,8 @@ const About = () => {
           width="full"
           objectFit="cover"
           height="full"
-          src="https://images.unsplash.com/photo-1548695607-9c73430ba065?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1484&q=80"
+          // src="https://images.unsplash.com/photo-1548695607-9c73430ba065?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1484&q=80"
+          src="/about-photo.jpg"
         />
       </Box>
       <Stack px={[4, 8, 12]} w="full" alignItems="center">

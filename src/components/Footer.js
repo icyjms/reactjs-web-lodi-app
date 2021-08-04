@@ -36,7 +36,7 @@ function Footer() {
       <Container maxW="12xl" px={[4, 8, 16]}>
         <Stack
           direction={{ base: 'column', lg: 'row' }}
-          height={{ base: '', md: '110px' }}
+          height={{ base: '', lg: '110px' }}
         >
           <Flex direction="column" justifyContent="space-evenly">
             {/* <Box as={Stack} maxW={'3xl'} py={10}> */}
