@@ -15,6 +15,7 @@ import { contactNumbers, officeAddress } from 'utils/config';
 import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
 import { ReactComponent as FB } from 'assets/img/fb.svg';
 import { ReactComponent as IG } from 'assets/img/ig.svg';
+import { ReactComponent as YT } from 'assets/img/youtube.svg';
 
 const About = () => {
   return (
@@ -77,6 +78,7 @@ const About = () => {
               <HStack align="start">
                 <FB />
                 <IG />
+                <YT />
               </HStack>
               <Stack h="5px"></Stack>
               <Text fontWeight="bold" fontSize="smaller">
@@ -91,7 +93,8 @@ const About = () => {
             <Box>
               <iframe
                 title="LODI"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.290872488916!2d121.08570251535168!3d14.582494381428434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7a13ab1a17f%3A0xac5420df76fd43ff!2sLogistikus!5e0!3m2!1sen!2sph!4v1627545002092!5m2!1sen!2sph"
+                // src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3861.290872488916!2d121.08570251535168!3d14.582494381428434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3397c7a13ab1a17f%3A0xac5420df76fd43ff!2sLogistikus!5e0!3m2!1sen!2sph!4v1627545002092!5m2!1sen!2sph"
+                src="https://maps.google.com/maps?q=Logistikus%20Express%20Philippines,%20Inc.%2020th%20Floor,%20Inoza%20Tower%2040th%20Avenue,%20Bonifacio%20Global%20City%20Taguig%20City,%20Philippines&t=&z=13&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="450"
                 style={{ border: 0 }}

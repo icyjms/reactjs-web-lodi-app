@@ -1,7 +1,7 @@
 // import { ArrowBackIcon } from '@chakra-ui/icons';
 import { Box, Container, Heading, Text } from '@chakra-ui/react';
 // import { useHistory } from 'react-router-dom';
-import { topFunction } from '../../utils/helpers';
+import { goToTop } from 'utils/helpers';
 
 import Section from 'components/Section';
 
@@ -580,7 +580,7 @@ function TermsAndConditions() {
           <p>&nbsp;</p>
           <p>&nbsp;</p>
         </Box>
-        <button onClick={() => topFunction()} id="goto-top" title="Go to top">
+        <button onClick={() => goToTop()} id="goto-top" title="Go to top">
           Go to Top
         </button>
       </Container>
