@@ -10,11 +10,11 @@ import {
   Text,
   VStack,
 } from '@chakra-ui/react';
-import { contactNumbers } from 'utils/config';
+import { contactNumbers, officeAddress } from 'utils/config';
 
+import { EmailIcon, PhoneIcon } from '@chakra-ui/icons';
 import { ReactComponent as FB } from 'assets/img/fb.svg';
 import { ReactComponent as IG } from 'assets/img/ig.svg';
-import { PhoneIcon } from '@chakra-ui/icons';
 
 const About = () => {
   return (
@@ -30,20 +30,25 @@ const About = () => {
       <Stack px={[4, 8, 12]} w="full" alignItems="center">
         <Flex direction="column" justifySelf="center" maxW="6xl">
           <Heading fontWeight="normal" py={[2, 4, 6]}>
-            We are LODI
+            LODI, the newest service of Logistikus Inc., offers on-demand
+            deliveries.
           </Heading>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            Though the company is relatively new in the industry, it is built on
+            a solid foundation with the best minds in the business.
+            <b> Our Management Team and employees</b> have a collective
+            experience in supply chain logistics for over 20 years. These
+            logistic experts share the same goal—to provide the kind of delivery
+            services that would respond{' '}
+            <b>
+              to the needs of a customer group based on its business demands.
+            </b>
           </Text>
           <Text py={2}>
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sequi quod
-            beatae rerum quidem eius quisquam a molestiae modi itaque illum.
+            LODI aims to be the leading delivery booking app in the country. As
+            the need for <b>on-demand deliveries</b> continue to rise, we will
+            set the bar higher by bringing the best possible customer
+            experience.
           </Text>
           <SimpleGrid py={[2, 4, 8]} columns={{ base: 1, md: 2 }}>
             <Stack direction="column">
@@ -51,16 +56,21 @@ const About = () => {
                 Got some questions? Do you have a concern about one of our
                 items? Do you need further assistance?
               </Text>
+              <Stack h="5px"></Stack>
               <Text fontWeight="bold" fontSize="smaller">
                 Talk to us today!
               </Text>
               <VStack align="start">
+                <Text fontSize="smaller">
+                  <EmailIcon /> support@lodi.com.ph
+                </Text>
                 {contactNumbers.map((item, i) => (
                   <Text key={i} fontSize="smaller">
                     <PhoneIcon /> {item}
                   </Text>
                 ))}
               </VStack>
+              <Stack h="5px"></Stack>
               <Text fontWeight="bold" fontSize="smaller">
                 Connect to us online!
               </Text>
@@ -68,6 +78,15 @@ const About = () => {
                 <FB />
                 <IG />
               </HStack>
+              <Stack h="5px"></Stack>
+              <Text fontWeight="bold" fontSize="smaller">
+                Visit our Office
+              </Text>
+              {officeAddress.map((text, i) => (
+                <Text key={i} fontSize="smaller">
+                  {text}
+                </Text>
+              ))}
             </Stack>
             <Box>
               <iframe

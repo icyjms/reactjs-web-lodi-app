@@ -52,8 +52,7 @@ function Partner() {
             </Box>
             <Box pb={8}>
               <Text fontSize={{ base: 'md', md: 'xl', lg: 'xl', '2xl': '2xl' }}>
-                We offer the best way for businesses such as yours to tap into a
-                big market online!
+                We offer the best way for your businesses to tap the big market
               </Text>
             </Box>
             <Stack direction={{ base: 'column', lg: 'row' }}>

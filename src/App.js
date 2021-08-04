@@ -27,6 +27,13 @@ function App() {
           path="/terms-and-conditions"
           render={() => <TermsAndConditions />}
         />
+        <Route
+          path="/facebook"
+          component={() => {
+            window.location.replace('https://www.facebook.com');
+            return null;
+          }}
+        />
         <Route component={() => <div>Not Found</div>} />
       </Switch>
       <Footer />
