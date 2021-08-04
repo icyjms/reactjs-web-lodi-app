@@ -17,7 +17,7 @@ import LodiText from '../../components/LodiText';
 // import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import { offers } from 'utils/config';
 
-import GetNotified from 'components/GetNotified';
+// import GetNotified from 'components/GetNotified';
 import Section from 'components/Section';
 import { ReactComponent as PartnerImg } from 'assets/img/partner.svg';
 
@@ -95,7 +95,7 @@ function Partner() {
             <PartnerImg />
           </Center>
         </Stack>
-        <GetNotified index_key="1" />
+        {/* <GetNotified index_key="1" /> */}
       </Container>
     </Section>
   );
