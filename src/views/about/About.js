@@ -90,6 +90,7 @@ const About = () => {
                 </Text>
               ))}
             </Stack>
+            <Stack h="15px"></Stack>
             <Box>
               <iframe
                 title="LODI"

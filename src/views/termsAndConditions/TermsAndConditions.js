@@ -1,9 +1,9 @@
 // import { ArrowBackIcon } from '@chakra-ui/icons';
 import { Box, Container, Heading, Text } from '@chakra-ui/react';
 // import { useHistory } from 'react-router-dom';
-import { goToTop } from 'utils/helpers';
-
 import Section from 'components/Section';
+import { ArrowUpIcon } from '@chakra-ui/icons';
+import { goToTop } from 'utils/helpers';
 
 function TermsAndConditions() {
   // let history = useHistory();
@@ -581,7 +581,7 @@ function TermsAndConditions() {
           <p>&nbsp;</p>
         </Box>
         <button onClick={() => goToTop()} id="goto-top" title="Go to top">
-          Go to Top
+          <ArrowUpIcon />
         </button>
       </Container>
     </Section>

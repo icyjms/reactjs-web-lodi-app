@@ -45,7 +45,7 @@ function Footer() {
             </Box>
             <SimpleGrid
               justifyContent="center"
-              columns={{ base: 1, sm: 2, md: 4 }}
+              columns={{ base: 1, sm: 3, md: 3 }}
               // spacing={2}
             >
               <Link color="light.100" href="/about">
