@@ -64,9 +64,9 @@ const HowItWorks = () => {
               onChange={setCUrrentState}
               direction="vertical"
             >
-              {HIWdata.map((item) => (
+              {HIWdata.map((item, i) => (
                 <Step
-                  key={item.id}
+                  key={i}
                   title={item.title}
                   description={item.description}
                   icon={item.icon}
