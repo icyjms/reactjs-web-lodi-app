@@ -1,6 +1,6 @@
 import {
   Box,
-  Button,
+  // Button,
   Center,
   Container,
   Flex,
@@ -11,22 +11,22 @@ import {
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 
-import GetNotified from 'components/GetNotified';
+// import GetNotified from 'components/GetNotified';
 import Section from 'components/Section';
 import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
-import { ReactComponent as DeviceImg } from 'assets/img/pre-launch-device.svg';
+import { ReactComponent as DeviceImg } from 'assets/img/group-image.svg';
 import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 // import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import IdolText from '../../components/IdolText';
 
 function Home() {
   // const subtext = 'Get notified when we launch';
 
-  const goTo = (path) => {
+  /*  const goTo = (path) => {
     // window.history.pushState({}, document.title, path);
     window.location.href = path;
-  };
+  }; */
 
   const toast = useToast();
   const toastIdRef = useRef();
@@ -66,40 +66,15 @@ function Home() {
                   style={{ textTransform: 'uppercase' }}
                 >
                   Parating na ang bagong
-                  {/* <Box
-                    width={{ base: '60px', sm: '80px', lg: '160px' }}
-                    display="inline-block"
-                  >
-                    <Logo width="100%" height="100%" />
-                  </Box> */}
                   <IdolText />
                   ng delivery!
                 </Text>
               </Heading>
-              <Stack marginBottom="35px !important">
-                <GetNotified index_key="0" />
-              </Stack>
             </Stack>
-            <Stack
-              direction={{ base: 'column', xl: 'row' }}
-              spacing={[4, 8, 12]}
-            >
-              <Stack direction="column">
-                <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
-                <Box>
-                  <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                    BE A LODI PARTNER
-                  </Button>
-                </Box>
-              </Stack>
-              <Stack direction="column">
-                <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
-                <Box>
-                  <Button as={Link} to="/rider" backgroundColor="#E3E3E3">
-                    BE A LODI RIDER
-                  </Button>
-                </Box>
-              </Stack>
+            <Stack>
+              <Text fontSize={{ base: 'md', '2xl': '2xl' }} color="gray.500">
+                Gusto mo bang maging LODI sa negosyo? Be a LODI partner!
+              </Text>
             </Stack>
             <Stack>
               <Flex>

@@ -1,4 +1,10 @@
+import {
+  EnvironmentOutlined,
+  GiftOutlined,
+  UnorderedListOutlined,
+} from '@ant-design/icons';
 import { Icon } from '@chakra-ui/icon';
+import { TimeIcon } from '@chakra-ui/icons';
 
 const sections = [
   {
@@ -194,4 +200,58 @@ const officeAddress = [
   'Bonifacio Global City Taguig City, Philippines',
 ];
 
-export { sections, features, offers, contactNumbers, officeAddress };
+const HIWdata = [
+  {
+    title: 'Book a delivery',
+    description: 'Provide the necessary information for the delivery',
+    icon: <UnorderedListOutlined />,
+  },
+  {
+    title: 'Wait for a Rider',
+    description:
+      'Wait for a Rider to be assigned, and to arrive at the pickup location',
+    icon: <TimeIcon />,
+  },
+  {
+    title: 'Handover your packages',
+    description: 'Let the Rider handle and deliver your packages',
+    icon: <GiftOutlined />,
+  },
+  {
+    title: 'Track your package',
+    description: 'Track the progress of your booking in real-time',
+    icon: <EnvironmentOutlined />,
+  },
+];
+
+const benefitsData = [
+  {
+    title: 'Fast and Easy Booking',
+    description:
+      'Book through our website or call our customer service hotlines.',
+  },
+  {
+    title: 'Delivers in 45 minutes or less',
+    description:
+      'We fulfill deliveries in 45 minutes or less in our pilot areas, and within a 10km radius from seller to customer.',
+  },
+  {
+    title: 'Straightforward Delivery Rates',
+    description:
+      'We charge a flat rate of P85 for the first 5 kms and P8 for every succeeding km. Package weight limit is 5kg.',
+  },
+  {
+    title: 'Cash on Delivery',
+    description: 'We accept COD payments with a minimal service fee of 2.5%.',
+  },
+];
+
+export {
+  sections,
+  features,
+  offers,
+  contactNumbers,
+  officeAddress,
+  HIWdata,
+  benefitsData,
+};

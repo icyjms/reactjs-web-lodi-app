@@ -68,8 +68,8 @@ function Partner() {
                   columns={{ base: 1, lg: 2 }}
                   spacing={4}
                 >
-                  {offers.map((item) => (
-                    <HStack key={item} align="top">
+                  {offers.map((item, i) => (
+                    <HStack key={i} align="top">
                       <Box color="yellow" px={2}>
                         <Icon as={CheckIcon} />
                       </Box>
