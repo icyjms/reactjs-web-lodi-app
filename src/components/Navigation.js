@@ -56,7 +56,7 @@ function Navigation() {
   }, [pathname]);
 
   return (
-    <Container maxW="12xl" px={[4, 8, 16]}>
+    <Container maxW="12xl" px={[4, 2, 2]}>
       <Box>
         <Flex
           h={16}
