@@ -13,7 +13,7 @@ import {
 } from '@chakra-ui/react';
 import { ReactComponent as EmailImg } from 'assets/img/email.svg';
 import { Form, Formik } from 'formik';
-import { initValues, validationSchema } from './rider-config';
+import { initValues, validationSchema } from './get-in-touch-config';
 
 function GetInTouch() {
   // const toast = useToast();
