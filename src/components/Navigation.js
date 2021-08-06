@@ -55,6 +55,10 @@ function Navigation() {
     return () => {};
   }, [pathname]);
 
+  const goTo = (path) => {
+    window.location.href = `/${path}`;
+  };
+
   return (
     <Container maxW="12xl" px={[4, 2, 2]}>
       <Box>
@@ -83,6 +87,16 @@ function Navigation() {
                 {item.name}
               </NavLink>
             ))}
+            <Link
+              style={{ textDecoration: 'none' }}
+              onMouseOver={(e) => (e.target.style.color = 'black')}
+              color="#f34854"
+              onClick={() => {
+                goTo('#contact-us');
+              }}
+            >
+              Contact Us
+            </Link>
             <Box as={RouterLink} to="/rider">
               <Button backgroundColor="cyan" color="white">
                 BE A LODI RIDER
@@ -99,6 +113,16 @@ function Navigation() {
                   {item.name}
                 </NavLink>
               ))}
+              <Link
+                style={{ textDecoration: 'none', marginLeft: '10px' }}
+                onMouseOver={(e) => (e.target.style.color = 'black')}
+                color="#f34854"
+                onClick={() => {
+                  goTo('#contact-us');
+                }}
+              >
+                Contact Us
+              </Link>
               <Box as={RouterLink} to="/rider">
                 <Button backgroundColor="cyan" color="white">
                   BE A LODI RIDER

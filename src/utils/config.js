@@ -23,10 +23,10 @@ const sections = [
   //   name: 'Be a LODI RIder',
   //   link: '#lodi-rider',
   // },
-  // {
-  //   name: 'Contact Us',
-  //   link: '#contact-us',
-  // },
+  /*  {
+    name: 'Contact Us',
+    link: '/#contact-us',
+  }, */
 ];
 
 const features = [
