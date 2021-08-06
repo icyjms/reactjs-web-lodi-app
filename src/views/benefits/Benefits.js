@@ -62,6 +62,8 @@ function Benefits() {
                     lg: '2xl',
                     '2xl': '2xl',
                   }}
+                  marginBottom="unset"
+                  fontWeight="bold"
                 >
                   {item.title}
                 </Text>

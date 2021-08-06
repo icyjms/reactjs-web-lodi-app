@@ -37,20 +37,17 @@ const About = () => {
           </Heading>
           <Text>
             Though the company is relatively new in the industry, it is built on
-            a solid foundation with the best minds in the business.
-            <b> Our Management Team and employees</b> have a collective
-            experience in supply chain logistics for over 20 years. These
-            logistic experts share the same goal—to provide the kind of delivery
-            services that would respond{' '}
-            <b>
-              to the needs of a customer group based on its business demands.
-            </b>
+            a solid foundation with the best minds in the business. Our
+            Management Team and employees have a collective experience in supply
+            chain logistics for over 20 years. These logistic experts share the
+            same goal—to provide the kind of delivery services that would
+            respond to the needs of a customer group based on its business
+            demands.
           </Text>
           <Text py={2}>
             LODI aims to be the leading delivery booking app in the country. As
-            the need for <b>on-demand deliveries</b> continue to rise, we will
-            set the bar higher by bringing the best possible customer
-            experience.
+            the need for on-demand deliveries continue to rise, we will set the
+            bar higher by bringing the best possible customer experience.
           </Text>
           <SimpleGrid py={[2, 4, 8]} columns={{ base: 1, md: 2 }}>
             <Stack direction="column">
