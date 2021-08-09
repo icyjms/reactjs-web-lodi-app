@@ -44,7 +44,11 @@ const HowItWorks = () => {
               <StepImage src={steps[current_state]} />
             </StepsFlex>
           </DivRelative>
-          <Flex direction="column" justifyContent="space-between">
+          <Flex
+            direction="column"
+            justifyContent="space-between"
+            maxWidth="60% !important"
+          >
             <Box pb={4}>
               <Text
                 fontSize={{ base: 'md', sm: '2xl', '2xl': '2xl' }}

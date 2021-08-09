@@ -52,10 +52,6 @@ code {
   font-weight: 500;
 }
 
-.dwChxw > div:last-child {
-  max-width:60% !important;
-}
-
 /* Hide scrollbar for Chrome, Safari and Opera */
 ::-webkit-scrollbar {
   display: none;
