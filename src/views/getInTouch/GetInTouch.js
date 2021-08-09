@@ -1,4 +1,5 @@
 import FormItem from 'components/FormItem';
+import FormTextArea from 'components/FormTextArea';
 import React, { useCallback, useReducer, useRef } from 'react';
 import Section from 'components/Section';
 import {
@@ -7,6 +8,7 @@ import {
   Container,
   Flex,
   Heading,
+  InputLeftAddon,
   Spacer,
   Stack,
   VisuallyHidden,
@@ -179,6 +181,7 @@ function GetInTouch() {
                       name="mobile_number"
                       label="Mobile Number"
                       value={values.mobile_number || ''}
+                      leftAddon={<InputLeftAddon children="+63" />}
                       onChange={(event) => {
                         handleChange(event);
                         handleInputChange({ event, errors, touched });
@@ -193,10 +196,10 @@ function GetInTouch() {
                         handleInputChange({ event, errors, touched });
                       }}
                     />
-                    <FormItem
+                    <FormTextArea
                       name="message"
                       label="Message"
-                      value={values.message || ''}
+                      value={values.subject || ''}
                       onChange={(event) => {
                         handleChange(event);
                         handleInputChange({ event, errors, touched });
@@ -204,7 +207,6 @@ function GetInTouch() {
                     />
                     <Button
                       mt="8"
-                      // type="submit"
                       onClick={handleNotified}
                       isLoading={isSubmitting || loading}
                       loadingText="Submitting"
