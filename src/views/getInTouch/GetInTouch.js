@@ -70,6 +70,19 @@ function GetInTouch() {
               const field_name = item[0];
               const entry_id = item[1];
               const value = values[field_name];
+
+              if (field_name === 'message') {
+                return (
+                  <textarea
+                    key={x}
+                    data-test-id="aa"
+                    name={entry_id}
+                    value={value || ''}
+                    onChange={() => {}}
+                    required
+                  ></textarea>
+                );
+              }
               return (
                 <input
                   key={x}
@@ -199,7 +212,7 @@ function GetInTouch() {
                     <FormTextArea
                       name="message"
                       label="Message"
-                      value={values.subject || ''}
+                      value={values.message || ''}
                       onChange={(event) => {
                         handleChange(event);
                         handleInputChange({ event, errors, touched });
