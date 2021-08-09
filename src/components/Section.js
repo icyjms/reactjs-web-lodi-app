@@ -28,7 +28,7 @@ const Section = ({ id, children }) => {
       id={id}
       alignItems="center"
       as="section"
-      minHeight={{ base: '70vh', lg: '100vh', '2xl': '90vh' }}
+      minHeight={{ base: '50vh', lg: '100vh', '2xl': '90vh' }}
       {...{ ref }}
       direction="column"
     >

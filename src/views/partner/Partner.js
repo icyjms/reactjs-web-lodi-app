@@ -13,10 +13,11 @@ import {
 } from '@chakra-ui/react';
 import { CheckIcon } from '@chakra-ui/icons';
 
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import LodiText from '../../components/LodiText';
+// import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import { offers } from 'utils/config';
 
-import GetNotified from 'components/GetNotified';
+// import GetNotified from 'components/GetNotified';
 import Section from 'components/Section';
 import { ReactComponent as PartnerImg } from 'assets/img/partner.svg';
 
@@ -32,26 +33,26 @@ function Partner() {
                 mb={5}
                 fontSize={{ base: '4xl', md: '6xl', lg: '7xl', '2xl': '8xl' }}
               >
-                BE A &nbsp;
-                <Box
+                BE A
+                {/* <Box
                   width={{ base: '60px', md: '96px', lg: '160px' }}
                   display="inline-block"
                 >
                   <Logo width="100%" height="100%" />
-                </Box>
-                &nbsp; PARTNER
+                </Box> */}
+                <LodiText />
+                PARTNER
               </Heading>
               <Text
                 fontSize={{ base: 'md', md: 'xl', lg: 'xl', '2xl': '2xl' }}
                 color="gray.400"
               >
-                Give your restaurant and online business a boost
+                Give your business a boost
               </Text>
             </Box>
             <Box pb={8}>
               <Text fontSize={{ base: 'md', md: 'xl', lg: 'xl', '2xl': '2xl' }}>
-                We offer the best way for businesses such as yours to tap into a
-                big market online!
+                We offer the best way for your businesses to tap the big market
               </Text>
             </Box>
             <Stack direction={{ base: 'column', lg: 'row' }}>
@@ -62,13 +63,13 @@ function Partner() {
               >
                 <SimpleGrid
                   autoFlow={{ base: 'row', lg: 'column' }}
-                  templateRows={{ lg: 'repeat(4, 1fr)' }}
+                  templateRows={{ lg: 'repeat(3, 1fr)' }}
                   justifyContent="center"
                   columns={{ base: 1, lg: 2 }}
-                  spacing={8}
+                  spacing={4}
                 >
-                  {offers.map((item) => (
-                    <HStack key={item} align="top">
+                  {offers.map((item, i) => (
+                    <HStack key={i} align="top">
                       <Box color="yellow" px={2}>
                         <Icon as={CheckIcon} />
                       </Box>
@@ -87,7 +88,6 @@ function Partner() {
                     </HStack>
                   ))}
                 </SimpleGrid>
-                <GetNotified index_key="1" />
               </Flex>
             </Stack>
           </Flex>
@@ -95,6 +95,7 @@ function Partner() {
             <PartnerImg />
           </Center>
         </Stack>
+        {/* <GetNotified index_key="1" /> */}
       </Container>
     </Section>
   );

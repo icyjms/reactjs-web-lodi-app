@@ -1,9 +1,9 @@
 // import { ArrowBackIcon } from '@chakra-ui/icons';
 import { Box, Container, Heading, Text } from '@chakra-ui/react';
 // import { useHistory } from 'react-router-dom';
-import { topFunction } from '../../utils/helpers';
-
 import Section from 'components/Section';
+import { ArrowUpIcon } from '@chakra-ui/icons';
+import { goToTop } from 'utils/helpers';
 
 function PrivacyPolicy() {
   // let history = useHistory();
@@ -538,8 +538,8 @@ function PrivacyPolicy() {
           <p>&nbsp;</p>
           <p>&nbsp;</p>
         </Box>
-        <button onClick={() => topFunction()} id="goto-top" title="Go to top">
-          Go to Top
+        <button onClick={() => goToTop()} id="goto-top" title="Go to top">
+          <ArrowUpIcon />
         </button>
       </Container>
     </Section>

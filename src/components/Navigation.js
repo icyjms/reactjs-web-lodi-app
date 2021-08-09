@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 
 import {
   Box,
+  Button,
   Container,
   Flex,
   HStack,
@@ -54,12 +55,23 @@ function Navigation() {
     return () => {};
   }, [pathname]);
 
+  const goTo = (path) => {
+    window.location.href = `/${path}`;
+  };
+
   return (
-    <Container maxW="12xl" px={[4, 8, 16]}>
+    <Container maxW="12xl" px={[4, 2, 2]}>
       <Box>
-        <Flex h={16} alignItems="center" justifyContent="space-between">
+        <Flex
+          h={16}
+          alignItems="center"
+          justifyContent="space-between"
+          style={{ boxShadow: '0 10px 8px 0 rgb(0 0 0 / 10%' }}
+        >
           <Box as={RouterLink} to="/">
-            <Logo />
+            <div /* className="logo" */>
+              <Logo width={105} height={75} />
+            </div>
           </Box>
           <IconButton
             size="md"
@@ -75,6 +87,22 @@ function Navigation() {
                 {item.name}
               </NavLink>
             ))}
+            <Link
+              style={{ textDecoration: 'none' }}
+              onMouseOver={(e) => (e.target.style.color = 'black')}
+              onMouseOut={(e) => (e.target.style.color = '#f34854')}
+              color="#f34854"
+              onClick={() => {
+                goTo('#contact-us');
+              }}
+            >
+              Contact Us
+            </Link>
+            <Box as={RouterLink} to="/rider">
+              <Button backgroundColor="cyan" color="white">
+                BE A LODI RIDER
+              </Button>
+            </Box>
           </HStack>
         </Flex>
 
@@ -86,6 +114,22 @@ function Navigation() {
                   {item.name}
                 </NavLink>
               ))}
+              <Link
+                style={{ textDecoration: 'none', marginLeft: '10px' }}
+                onMouseOver={(e) => (e.target.style.color = 'black')}
+                onMouseOut={(e) => (e.target.style.color = '#f34854')}
+                color="#f34854"
+                onClick={() => {
+                  goTo('#contact-us');
+                }}
+              >
+                Contact Us
+              </Link>
+              <Box as={RouterLink} to="/rider">
+                <Button backgroundColor="cyan" color="white">
+                  BE A LODI RIDER
+                </Button>
+              </Box>
             </Stack>
           </Box>
         ) : null}

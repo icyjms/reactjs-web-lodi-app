@@ -1,6 +1,7 @@
 import {
   Box,
-  Button,
+  // Button,
+  Center,
   Container,
   Flex,
   Heading,
@@ -10,21 +11,22 @@ import {
 } from '@chakra-ui/react';
 import { useRef } from 'react';
 
-import GetNotified from 'components/GetNotified';
+// import GetNotified from 'components/GetNotified';
 import Section from 'components/Section';
 import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
-import { ReactComponent as DeviceImg } from 'assets/img/pre-launch-device.svg';
+import { ReactComponent as DeviceImg } from 'assets/img/group-image.svg';
 import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
-import { Link } from 'react-router-dom';
-import { ReactComponent as Logo } from 'assets/img/logo.svg';
+// import { Link } from 'react-router-dom';
+// import { ReactComponent as Logo } from 'assets/img/logo.svg';
+import IdolText from '../../components/IdolText';
 
 function Home() {
-  const subtext = 'Get notified when we launch';
+  // const subtext = 'Get notified when we launch';
 
-  const goTo = (path) => {
+  /*  const goTo = (path) => {
     // window.history.pushState({}, document.title, path);
     window.location.href = path;
-  };
+  }; */
 
   const toast = useToast();
   const toastIdRef = useRef();
@@ -63,53 +65,21 @@ function Home() {
                   color="dark.100"
                   style={{ textTransform: 'uppercase' }}
                 >
-                  Parating na ang bagong &nbsp;
-                  <Box
-                    width={{ base: '60px', sm: '80px', lg: '160px' }}
-                    display="inline-block"
-                  >
-                    <Logo width="100%" height="100%" />
-                  </Box>
-                  &nbsp; ng delivery!
+                  Parating na ang bagong
+                  <IdolText />
+                  ng delivery!
                 </Text>
               </Heading>
-              <Stack>
-                <Text
-                  color="gray.500"
-                  fontSize={{ base: '1xl', sm: '2xl', lg: '3xl' }}
-                >
-                  {subtext}
-                  {/* Gusto mo bang maging LODI sa negosyo?
-              <br /> Be a LODI partner! */}
-                </Text>
-                <GetNotified index_key="0" />
-              </Stack>
             </Stack>
-            <Stack
-              direction={{ base: 'column', xl: 'row' }}
-              spacing={[4, 8, 12]}
-            >
-              <Stack direction="column">
-                <Text color="gray.500">Ikaw ba ay may negosyo?</Text>
-                <Box>
-                  <Button bg="brand.100" onClick={() => goTo('#partner')}>
-                    MAGING LODI PARTNER
-                  </Button>
-                </Box>
-              </Stack>
-              <Stack direction="column">
-                <Text color="gray.500">Ikaw ba ay isang Rider?</Text>
-                <Box>
-                  <Button as={Link} to="/rider" backgroundColor="cyan">
-                    MAGING LODI RIDER
-                  </Button>
-                </Box>
-              </Stack>
+            <Stack>
+              <Text fontSize={{ base: 'md', '2xl': '2xl' }} color="gray.500">
+                Gusto mo bang maging LODI sa negosyo? Be a LODI partner!
+              </Text>
             </Stack>
             <Stack>
               <Flex>
                 <Box maxW="3xl" py={10}>
-                  <Text color="gray.500">Coming Soon!</Text>
+                  <Text color="gray.500">Available Soon!</Text>
                   <Box onClick={addToast} as="button">
                     <AppStoreLogo />
                   </Box>
@@ -131,9 +101,11 @@ function Home() {
               // px={[4, 8, 12]}
             >
               {
-                <Box position="relative" width="full" overflow="hidden">
+                // <Box position="relative" width="full" overflow="hidden">
+                <Center>
                   <DeviceImg />
-                </Box>
+                </Center>
+                // </Box>
               }
             </Flex>
           }
