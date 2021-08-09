@@ -19,6 +19,13 @@ function App() {
         <Route exact path="/">
           <Main />
         </Route>
+        <Route
+          exact
+          path="/#contact-us"
+          render={({ history }) => {
+            history.push('/#contact-us');
+          }}
+        />
         <Route exact path="/rider" render={() => <Rider />} />
         <Route exact path="/about" render={() => <About />} />
         <Route exact path="/privacy-policy" render={() => <PrivacyPolicy />} />
