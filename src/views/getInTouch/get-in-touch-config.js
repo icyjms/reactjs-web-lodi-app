@@ -1,6 +1,6 @@
 import { object, string } from 'yup';
 
-const initValues = {
+const init_values = {
   full_name: '',
   email: '',
   mobile_number: '',
@@ -23,4 +23,30 @@ const validationSchema = object({
   subject: string().required('Please enter your subject'),
   message: string().required('Please enter your message'),
 });
-export { validationSchema, initValues };
+
+const GOOGLE_FORM_ENTRIES = {
+  full_name: 'entry.78770213',
+  email: 'entry.2031526209',
+  mobile_number: 'entry.966146896',
+  subject: 'entry.215903513',
+  message: 'entry.1009072701',
+};
+
+const GOOGLE_FORM_ACTION_URL =
+  process.env.REACT_APP_CONTACTUS_GOOGLE_FORM_ACTION_URL;
+
+const init_state = {
+  loading: false,
+  data: [],
+  initials: '',
+  iframe_loaded: false,
+  submit: false,
+};
+
+export {
+  validationSchema,
+  init_values,
+  GOOGLE_FORM_ENTRIES,
+  GOOGLE_FORM_ACTION_URL,
+  init_state,
+};
