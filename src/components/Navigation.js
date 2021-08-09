@@ -90,6 +90,7 @@ function Navigation() {
             <Link
               style={{ textDecoration: 'none' }}
               onMouseOver={(e) => (e.target.style.color = 'black')}
+              onMouseOut={(e) => (e.target.style.color = '#f34854')}
               color="#f34854"
               onClick={() => {
                 goTo('#contact-us');
@@ -116,6 +117,7 @@ function Navigation() {
               <Link
                 style={{ textDecoration: 'none', marginLeft: '10px' }}
                 onMouseOver={(e) => (e.target.style.color = 'black')}
+                onMouseOut={(e) => (e.target.style.color = '#f34854')}
                 color="#f34854"
                 onClick={() => {
                   goTo('#contact-us');
