@@ -196,22 +196,21 @@ function Rider() {
                   <Box py={[1, 2, 4]}>
                     <FormCheckbox name="privacy_policy_agreement" size="lg">
                       <Text fontSize="small" color="gray.600">
-                        <strong>Sumasang-ayon</strong> ako na kolektahin,
-                        gamitin, at <strong>ibahagi</strong> ng LODI ang mga
-                        impormasyon na may kaugnayan sa akin sa layuning naaayon
-                        sa Privacy Policy at Data Protection Act of 2012.
+                        Sumasang-ayon ako na kolektahin, gamitin, at ibahagi ng
+                        LODI ang mga impormasyon na may kaugnayan sa akin sa
+                        layuning naaayon sa Privacy Policy at Data Protection
+                        Act of 2012.
                       </Text>
                     </FormCheckbox>
                   </Box>
                   <Box py={[1, 2, 4]}>
                     <FormCheckbox name="for_marketing_use" size="lg">
                       <Text fontSize="small" color="gray.600">
-                        Nauunawaan kong ang mga impormasyon na galing sa akin ay{' '}
-                        <strong>maaaring</strong> gamitin ng LODI para sa{' '}
-                        <strong>M</strong>arketing. At, pumapayag akong
-                        makatanggap ng mga impormasyong may kinalaman sa{' '}
-                        <strong>P</strong>romotions sa pamamagitan ng email,
-                        SMS, o sa paano mang paraan na piliin ng LODI.
+                        Nauunawaan kong ang mga impormasyon na galing sa akin ay
+                        maaaring gamitin ng LODI para sa Marketing. At,
+                        pumapayag akong makatanggap ng mga impormasyong may
+                        kinalaman sa Promotions sa pamamagitan ng email, SMS, o
+                        sa paano mang paraan na piliin ng LODI.
                       </Text>
                     </FormCheckbox>
                   </Box>
