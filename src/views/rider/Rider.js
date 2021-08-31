@@ -38,6 +38,7 @@ function Rider() {
   });
   const [state, setState] = useReducer(dispatch, init_state);
   const [loading, setLoading] = useState(false);
+  const [vehiclesYearModels, setVehiclesYearModels] = useState(0);
 
   const { vehicle_types_options = [] } = state;
 
@@ -65,6 +66,7 @@ function Rider() {
   }
 
   useEffect(() => {
+    setVehiclesYearModels(getVehiclesYearModels());
     const params = {
       page: 1,
       limit: 9999999,
@@ -76,6 +78,13 @@ function Rider() {
       });
     });
   }, []);
+
+  const getVehiclesYearModels = () => {
+    const x = new Date('1/1/2016');
+    const y = new Date();
+    const z = y.getFullYear() - x.getFullYear();
+    return z;
+  };
 
   return (
     <Section>
@@ -166,7 +175,7 @@ function Rider() {
                       label="Vehicle’s Year Model"
                     >
                       <option value=""> -- Select --</option>
-                      {[...Array(100)].map((a, b) => {
+                      {[...Array(vehiclesYearModels)].map((a, b) => {
                         const year = new Date().getFullYear() - b;
                         return (
                           <option key={b} value={year}>
