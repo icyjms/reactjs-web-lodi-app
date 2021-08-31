@@ -79,7 +79,7 @@ function Rider() {
 
   return (
     <Section>
-      <Container maxW="12xl" px={[4, 8, 16]}>
+      <Container maxW="12xl" px={[4, 8, 16]} marginTop="75px">
         <Stack
           justifyContent="space-between"
           spacing={{ base: 16, md: 10 }}
