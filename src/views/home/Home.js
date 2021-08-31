@@ -1,6 +1,6 @@
 import {
   Box,
-  // Button,
+  Button,
   Center,
   Container,
   Flex,
@@ -16,7 +16,7 @@ import Section from 'components/Section';
 import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
 import { ReactComponent as DeviceImg } from 'assets/img/group-image.svg';
 import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
-// import { Link } from 'react-router-dom';
+import { ReactComponent as Playbutton } from 'assets/img/play-btn.svg';
 // import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import IdolText from '../../components/IdolText';
 
@@ -38,6 +38,13 @@ function Home() {
       isClosable: true,
     });
   }
+
+  const redirect = () => {
+    window.open(
+      'https://www.youtube.com/channel/UC6F0i9qkNqe4eYDhkz6x1sg',
+      '_blank',
+    );
+  };
 
   return (
     <Section>
@@ -78,16 +85,24 @@ function Home() {
               </Text>
             </Stack>
             <Stack>
-              <Flex>
+              <Flex justifyContent="space-between">
                 <Box maxW="3xl" py={10}>
                   <Text color="gray.500">Available Soon!</Text>
-                  <Box onClick={addToast} as="button">
-                    <AppStoreLogo />
-                  </Box>
-                  &nbsp;&nbsp;&nbsp;
-                  <Box onClick={addToast} as="button">
-                    <GooglePlayLogo />
-                  </Box>
+                  <Flex direction={{ base: 'column', sm: 'row' }}>
+                    <Box onClick={addToast} as="button">
+                      <AppStoreLogo />
+                    </Box>
+                    &nbsp;&nbsp;&nbsp;
+                    <Box onClick={addToast} as="button">
+                      <GooglePlayLogo />
+                    </Box>
+                    &nbsp;&nbsp;&nbsp;
+                    <Button onClick={() => redirect()} border="1px">
+                      <Playbutton />
+                      &nbsp;
+                      <span>Learn More</span>
+                    </Button>
+                  </Flex>
                 </Box>
               </Flex>
             </Stack>
