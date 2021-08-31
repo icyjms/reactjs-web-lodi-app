@@ -10,7 +10,7 @@ function PrivacyPolicy() {
   return (
     <Section>
       <Container maxW="12xl" p={[4, 8, 16]}>
-        <Box textAlign="justify">
+        <Box textAlign="justify" fontSize={{ base: '14px', md: '20px' }}>
           {/* <ArrowBackIcon
             w={10}
             h={10}
