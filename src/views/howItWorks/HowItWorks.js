@@ -33,7 +33,7 @@ const HowItWorks = () => {
         <Heading
           color="dark.100"
           mb={5}
-          fontSize={{ base: '4xl', md: '6xl', lg: '7xl', '2xl': '8xl' }}
+          fontSize={{ base: '4xl', sm: '5xl', lg: '6xl', '2xl': '8xl' }}
         >
           HOW IT WORKS
         </Heading>

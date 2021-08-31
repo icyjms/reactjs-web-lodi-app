@@ -23,7 +23,7 @@ function PrivacyPolicy() {
             marginBottom={[2, 4, 16]}
             lineHeight={1.1}
             fontWeight={500}
-            fontSize={{ base: '4xl', sm: '3xl', lg: '7xl' }}
+            fontSize={{ base: '4xl', sm: '3xl', lg: '6xl' }}
             marginTop="75px"
           >
             <Text

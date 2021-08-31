@@ -91,7 +91,7 @@ function Rider() {
               <Heading
                 lineHeight={1.1}
                 fontWeight={700}
-                fontSize={{ base: '4xl', sm: '3xl', lg: '7xl' }}
+                fontSize={{ base: '4xl', sm: '3xl', lg: '6xl' }}
               >
                 <Text
                   as="span"
