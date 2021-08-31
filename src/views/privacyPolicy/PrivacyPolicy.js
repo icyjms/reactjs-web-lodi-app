@@ -20,10 +20,11 @@ function PrivacyPolicy() {
             }}
           /> */}
           <Heading
-            my={[2, 4, 16]}
+            marginBottom={[2, 4, 16]}
             lineHeight={1.1}
             fontWeight={500}
             fontSize={{ base: '4xl', sm: '3xl', lg: '7xl' }}
+            marginTop="75px"
           >
             <Text
               as="span"

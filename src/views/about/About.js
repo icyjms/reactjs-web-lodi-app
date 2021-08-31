@@ -20,7 +20,7 @@ import { ReactComponent as YT } from 'assets/img/youtube.svg';
 const About = () => {
   return (
     <Section direction="column">
-      <Box w="full" h="50vh">
+      <Box w="full" h="50vh" marginTop="75px">
         <Image
           width="full"
           objectFit="cover"

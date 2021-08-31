@@ -60,7 +60,15 @@ function Navigation() {
   };
 
   return (
-    <Container maxW="12xl" px={[4, 6, 10]}>
+    <Container
+      maxW="12xl"
+      px={[4, 6, 10]}
+      style={{
+        position: 'fixed',
+        backgroundColor: 'white',
+        zIndex: 1,
+      }}
+    >
       <Box>
         <Flex
           h={16}

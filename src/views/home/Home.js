@@ -59,6 +59,7 @@ function Home() {
                 lineHeight={1.1}
                 fontWeight={700}
                 fontSize={{ base: '4xl', sm: '5xl', lg: '7xl', '2xl': '8xl' }}
+                marginTop="75px"
               >
                 <Text
                   as="span"
