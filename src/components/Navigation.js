@@ -77,12 +77,10 @@ function Navigation() {
           justifyContent="space-between"
           style={{ boxShadow: '0 10px 8px 0 rgb(0 0 0 / 10%' }}
         >
-          <Box as={RouterLink} to="/" paddingLeft="10px">
-            <div /* className="logo" */>
-              <Logo width={105} height={75} />
-            </div>
+          <Box as={RouterLink} to="/" paddingLeft={[4, 6, 10]}>
+            <Logo width={75} height={45} />
           </Box>
-          <Box paddingRight="10px">
+          <Box paddingRight={[4, 6, 10]}>
             <IconButton
               size="md"
               icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
@@ -96,7 +94,7 @@ function Navigation() {
             as="nav"
             spacing={4}
             display={{ base: 'none', md: 'flex' }}
-            paddingRight="10px"
+            paddingRight={[4, 6, 10]}
           >
             {sections.map((item) => (
               <NavLink activeLink={activeLink} link={item.link} key={item.name}>
