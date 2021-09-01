@@ -62,7 +62,8 @@ function Navigation() {
   return (
     <Container
       maxW="12xl"
-      px={[4, 6, 10]}
+      // px={[4, 6, 10]}
+      padding="unset"
       style={{
         position: 'fixed',
         backgroundColor: 'white',
@@ -76,20 +77,27 @@ function Navigation() {
           justifyContent="space-between"
           style={{ boxShadow: '0 10px 8px 0 rgb(0 0 0 / 10%' }}
         >
-          <Box as={RouterLink} to="/">
+          <Box as={RouterLink} to="/" paddingLeft="10px">
             <div /* className="logo" */>
               <Logo width={105} height={75} />
             </div>
           </Box>
-          <IconButton
-            size="md"
-            icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
-            aria-label="Open Menu"
-            display={{ md: 'none' }}
-            onClick={isOpen ? onClose : onOpen}
-          />
+          <Box paddingRight="10px">
+            <IconButton
+              size="md"
+              icon={isOpen ? <CloseIcon /> : <HamburgerIcon />}
+              aria-label="Open Menu"
+              display={{ md: 'none' }}
+              onClick={isOpen ? onClose : onOpen}
+            />
+          </Box>
           {/* nav items */}
-          <HStack as="nav" spacing={4} display={{ base: 'none', md: 'flex' }}>
+          <HStack
+            as="nav"
+            spacing={4}
+            display={{ base: 'none', md: 'flex' }}
+            paddingRight="10px"
+          >
             {sections.map((item) => (
               <NavLink activeLink={activeLink} link={item.link} key={item.name}>
                 {item.name}
@@ -133,7 +141,7 @@ function Navigation() {
               >
                 Contact Us
               </Link>
-              <Box as={RouterLink} to="/rider">
+              <Box as={RouterLink} to="/rider" paddingLeft="10px">
                 <Button backgroundColor="cyan" color="white">
                   BE A LODI RIDER
                 </Button>

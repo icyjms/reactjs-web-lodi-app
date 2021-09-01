@@ -9,6 +9,7 @@ import {
   Text,
   useToast,
 } from '@chakra-ui/react';
+import { ChevronRightIcon } from '@chakra-ui/icons';
 import { useRef } from 'react';
 
 // import GetNotified from 'components/GetNotified';
@@ -16,7 +17,6 @@ import Section from 'components/Section';
 import { ReactComponent as AppStoreLogo } from 'assets/img/app-store-badge.svg';
 import { ReactComponent as DeviceImg } from 'assets/img/group-image.svg';
 import { ReactComponent as GooglePlayLogo } from 'assets/img/google-play-badge.svg';
-import { ReactComponent as Playbutton } from 'assets/img/play-btn.svg';
 // import { ReactComponent as Logo } from 'assets/img/logo.svg';
 import IdolText from '../../components/IdolText';
 
@@ -98,7 +98,7 @@ function Home() {
                     </Box>
                     &nbsp;&nbsp;&nbsp;
                     <Button onClick={() => redirect()} border="1px">
-                      <Playbutton />
+                      <ChevronRightIcon />
                       &nbsp;
                       <span>Learn More</span>
                     </Button>
