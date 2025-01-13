@@ -1,4 +1,5 @@
 {
+  "homepage": "https://icyjms.github.io/reactjs-web-lodi-app/",
   "name": "marketing-lodi",
   "version": "0.1.0",
   "private": true,
@@ -13,19 +14,21 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "antd": "^4.16.10",
-    "axios": "^0.19.0",
+    "axios": "^1.7.9",
     "formik": "^2.2.9",
     "framer-motion": "^4.1.17",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3",
+    "react-scripts": "^5.0.1",
     "styled-components": "^5.3.0",
     "web-vitals": "^1.1.2",
     "yup": "^0.32.9"
   },
   "scripts": {
     "start": "react-scripts start",
+    "predeploy": "npm run build",
+    "deploy":"gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -68,6 +71,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
+    "gh-pages": "^6.3.0",
     "husky": "^4.3.8",
     "lint-staged": "^9.2.5",
     "prettier": "^2.3.2"
